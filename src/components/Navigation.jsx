@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 const Navigation = () => {
   const [NavisOpen, setNavisOpen] = useState(false);
- const [isShow, setisShow] = useState(false)
+  const [isShow, setisShow] = useState(false);
   const show = () => {
     setisShow(!isShow);
-  }
+  };
   const toggleNav = () => {
     setNavisOpen(!NavisOpen);
   };
@@ -57,38 +57,41 @@ const Navigation = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex flex-1 items-center justify-center sm:items-stretch  sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
+              <h1 className="text-white text-3xl font-Roboto font-bold ">
+                Pandora
+              </h1>
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 font-medium">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+
                 <NavLink
+                  exact
                   to="/"
-                  className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                  aria-current="page"
+                  activeClassName="bg-gray-900 text-white" // Apply this class when active
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Home
                 </NavLink>
                 <NavLink
                   to="/about"
+                  activeClassName="bg-gray-900 text-white" // Apply this class when active
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   About
                 </NavLink>
                 <NavLink
-                  to="/"
+                  to="/projects"
+                  activeClassName="bg-gray-900 text-white" // Apply this class when active
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Projects
                 </NavLink>
                 <NavLink
-                  to="/"
+                  to="/calendar"
+                  activeClassName="bg-gray-900 text-white" // Apply this class when active
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Calendar
@@ -132,16 +135,26 @@ const Navigation = () => {
                 >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">Open user menu</span>
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-6 h-6">
-  <path fillRule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clipRule="evenodd" />
-</svg>
-
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
                 </button>
               </div>
 
               {/* Dropdown menu, show/hide based on menu state */}
               <div
-                className= {`${isShow ? "absolute" : "hidden"}   dropdown  right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                className={`${
+                  isShow ? "absolute" : "hidden"
+                }   dropdown  right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
@@ -182,7 +195,10 @@ const Navigation = () => {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div className={`${NavisOpen ? "block" : "hidden"} sm:hidden`} id="mobile-menu">
+      <div
+        className={`${NavisOpen ? "block" : "hidden"} sm:hidden`}
+        id="mobile-menu"
+      >
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
           <a

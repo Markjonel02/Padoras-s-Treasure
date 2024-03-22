@@ -1,8 +1,32 @@
+import { useState, useEffect } from "react";
+import Layout from "./Layout";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import Aos from "aos";
 const Navigation = () => {
+  useEffect(() => {
+    Aos.init();
+
+    return () => {
+      Aos.refresh();
+    };
+  }, []);
+
   const [NavisOpen, setNavisOpen] = useState(false);
   const [isShow, setisShow] = useState(false);
+  //scroll
+  const [isScroll, setisScroll] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollToTop = window.scrollY;
+      setisScroll(scrollToTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const show = () => {
     setisShow(!isShow);
   };
@@ -11,7 +35,14 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-gray-800">
+    <nav
+      className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
+        isScroll
+          ? "bg-opacity-55  backdrop-blur-md backdrop-saturate-154 rounded-lg  shadow-sm"
+          : "bg-transparent"
+      }`}
+      data-aos="fade-down"
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -19,7 +50,7 @@ const Navigation = () => {
             <button
               onClick={toggleNav}
               type="button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -31,7 +62,7 @@ const Navigation = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="currentColor"
+                stroke="#362B23"
                 aria-hidden="true"
               >
                 <path
@@ -46,7 +77,7 @@ const Navigation = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="currentColor"
+                stroke="#362B23"
                 aria-hidden="true"
               >
                 <path
@@ -59,7 +90,7 @@ const Navigation = () => {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch  sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <h1 className="text-white text-3xl font-Roboto font-bold ">
+              <h1 className="text-quaternary text-5xl font-Roboto font-bold ">
                 Pandora
               </h1>
             </div>
@@ -67,57 +98,29 @@ const Navigation = () => {
               <div className="flex space-x-4 font-medium">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
 
-                <NavLink
-                  exact
-                  to="/"
-                  activeClassName="bg-gray-900 text-white" // Apply this class when active
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  activeClassName="bg-gray-900 text-white" // Apply this class when active
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  to="/projects"
-                  activeClassName="bg-gray-900 text-white" // Apply this class when active
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >
-                  Projects
-                </NavLink>
-                <NavLink
-                  to="/calendar"
-                  activeClassName="bg-gray-900 text-white" // Apply this class when active
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >
-                  Calendar
-                </NavLink>
+                <Layout />
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
             >
               <span className="absolute -inset-1.5"></span>
               <span className="sr-only">View notifications</span>
               <svg
-                className="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
+                strokeWidth={1.5}
+                stroke="#362B23"
+                className="w-6 h-6"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
                 />
               </svg>
             </button>
@@ -128,7 +131,7 @@ const Navigation = () => {
                 <button
                   type="button"
                   onClick={show}
-                  className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative flex rounded-full p-1 text-sm focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
@@ -137,14 +140,16 @@ const Navigation = () => {
                   <span className="sr-only">Open user menu</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
                     viewBox="0 0 24 24"
-                    fill="white"
+                    strokeWidth={1.5}
+                    stroke="#362B23"
                     className="w-6 h-6"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                      clipRule="evenodd"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                     />
                   </svg>
                 </button>
@@ -201,31 +206,31 @@ const Navigation = () => {
       >
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-          <a
-            href="#"
+          <NavLink
+            to="/"
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
-            Dashboard
-          </a>
-          <a
-            href="#"
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Team
-          </a>
-          <a
-            href="#"
+            About
+          </NavLink>
+          <NavLink
+            to="/"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Projects
-          </a>
-          <a
-            href="#"
+            Product
+          </NavLink>
+          <NavLink
+            to="/contact"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Calendar
-          </a>
+            Contact
+          </NavLink>
         </div>
       </div>
     </nav>

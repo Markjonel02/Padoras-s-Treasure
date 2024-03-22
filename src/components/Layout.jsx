@@ -1,21 +1,42 @@
-
-import { NavLink, Outlet } from "react-router-dom"; 
+import { NavLink, Outlet } from "react-router-dom";
 const Layout = () => {
   return (
-    <> 
-    <ul className="">
-    <li>
-      <NavLink to="/">Home</NavLink>
-    </li>
-    <li>
-      <NavLink to="/about">About</NavLink> 
-    </li>
+    <>
+      <div className="  mt-2">
+        <NavLink
+          exact
+          to="/"
+          activeClassName="bg-gray-900 text-quaternary"
+          className="text-quaternary hover:bg-gray-700 hover:text-white sm:inline-block sm:hover:bg-transparent sm:hover:text-gray-300 rounded-md px-3 py-2 font-bold text-lg"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          activeClassName="bg-gray-900 text-white"
+          className="text-quaternary hover:bg-gray-700 hover:text-white sm:inline-block sm:hover:bg-transparent sm:hover:text-gray-300 rounded-md px-3 py-2  font-bold text-lg"
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/products"
+          activeClassName="bg-gray-900 text-white"
+          className="text-quaternary hover:bg-gray-700 hover:text-white sm:inline-block sm:hover:bg-transparent sm:hover:text-gray-300 rounded-md px-3 py-2 font-bold text-lg"
+        >
+          Products
+        </NavLink>
+        <NavLink
+          to="/contact"
+          activeClassName="bg-gray-900 text-white"
+          className="text-quaternary hover:bg-gray-700 hover:text-white sm:inline-block sm:hover:bg-transparent sm:hover:text-gray-300 rounded-md px-3 py-2 font-bold text-lg"
+        >
+          Contact
+        </NavLink>
+      </div>
 
-  </ul>
-  <Outlet/>
-  </>
-  
-  )
-}
+      <Outlet />
+    </>
+  );
+};
 
-export default Layout
+export default Layout;

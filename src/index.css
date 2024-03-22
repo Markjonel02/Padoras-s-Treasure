@@ -16,8 +16,9 @@
        url('assets/fonts/Roboto-Bold.ttf') format('ttf'),
        url('assets/fonts/Roboto-Black.ttf') format('ttf');
 }
-
   * {
     font-family: "Roboto", sans;
+    @apply m-0 p-0 scroll-smooth
   }
+  
 }

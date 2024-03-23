@@ -1,15 +1,10 @@
-import Home from "../routers/Home";
-import svg from "../assets/imgs/model.svg";
-function Props({ children }) {
+import PropTypes from "prop-types";
+const Maincontainer = ({ children }) => {
   return <div>{children}</div>;
-}
-
-const Maincontainer = () => {
-  return (
-    <div>
-      <Home  />
-    </div>
-  );
+};
+Maincontainer.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default Maincontainer;

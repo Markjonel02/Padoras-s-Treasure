@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-               'Roboto': ['"Roboto"', ...defaultTheme.fontFamily.sans],
+               'Roboto': ['"Roboto",', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'primary': '#d1c7c7ff',
@@ -15,7 +15,8 @@ export default {
         'tertiary': '#BAC0CA',
         'quaternary': '#362B23',
         'quinary': '#D9D9D9',
-        'dark-pink':'#9e8689ff'
+        'dark-pink':'#9e8689ff',
+        'dark-mode': '#0f1729ff',
       }
     },
   },

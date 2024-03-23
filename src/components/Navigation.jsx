@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Layout from "./Layout";
 import { NavLink } from "react-router-dom";
 import Aos from "aos";
+
 const Navigation = () => {
   useEffect(() => {
     Aos.init();
@@ -13,8 +14,19 @@ const Navigation = () => {
 
   const [NavisOpen, setNavisOpen] = useState(false);
   const [isShow, setisShow] = useState(false);
-  //scroll
   const [isScroll, setisScroll] = useState(false);
+  const [Dimension, setDimension] = useState(window.innerWidth >= 700);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimension(window.innerWidth >= 700);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollToTop = window.scrollY;
@@ -30,21 +42,21 @@ const Navigation = () => {
   const show = () => {
     setisShow(!isShow);
   };
+
   const toggleNav = () => {
     setNavisOpen(!NavisOpen);
   };
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
+      className={`fixed w-full top-0 z-50 transition duration-300 p-3  ${
         isScroll
-          ? "bg-opacity-55  backdrop-blur-md backdrop-saturate-154 rounded-lg  shadow-sm"
+          ? " text-quaternary bg-opacity-55  backdrop-blur-md backdrop-saturate-154 rounded-lg  shadow-sm dark:bg-dark-mode"
           : "bg-transparent"
       }`}
-      data-aos="fade-down"
     >
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="relative flex h-16 items-center justify-between w-full">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
             <button
@@ -73,7 +85,7 @@ const Navigation = () => {
               </svg>
               {/* Icon when menu is open */}
               <svg
-                className={`${NavisOpen ? "block" : "hidden"} h-6 w-6`}
+                className={`${NavisOpen ? "block" : "hidden"}  h-6 w-6`}
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
@@ -88,24 +100,23 @@ const Navigation = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch  sm:justify-start">
+          {Dimension && (
             <div className="flex flex-shrink-0 items-center">
-              <h1 className="text-quaternary text-5xl font-Roboto font-bold ">
+              <h1 className="text-quaternary dark:text-quinary text-5xl font-Roboto font-bold ">
                 Pandora
               </h1>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4 font-medium">
-                {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+          )}
 
-                <Layout />
-              </div>
+          <div className="hidden sm:flex items-center justify-center">
+            <div className="flex space-x-4 font-medium">
+              <Layout />
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
+              className="relative rounded-full p-1 text-gray-400 dark: hover:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
             >
               <span className="absolute -inset-1.5"></span>
               <span className="sr-only">View notifications</span>
@@ -124,7 +135,6 @@ const Navigation = () => {
                 />
               </svg>
             </button>
-
             {/* Profile dropdown */}
             <div className="relative ml-3">
               <div>
@@ -154,12 +164,11 @@ const Navigation = () => {
                   </svg>
                 </button>
               </div>
-
               {/* Dropdown menu, show/hide based on menu state */}
               <div
                 className={`${
                   isShow ? "absolute" : "hidden"
-                }   dropdown  right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                } dropdown  right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
@@ -201,7 +210,7 @@ const Navigation = () => {
 
       {/* Mobile menu, show/hide based on menu state */}
       <div
-        className={`${NavisOpen ? "block" : "hidden"} sm:hidden`}
+        className={`${NavisOpen ? "block" : "hidden"} sm:hidden w-full`}
         id="mobile-menu"
       >
         <div className="space-y-1 px-2 pb-3 pt-2">

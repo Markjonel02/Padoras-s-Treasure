@@ -26,9 +26,7 @@ const Productsdrop = () => {
       <button
         id="dropdownHoverButton"
         onClick={toggleDropdown}
-        className={`bg-transparent text-quaternary font-bold hover:bg-gray-700 text-lg sm:hover:text-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center ${
-          isScroll && "dark:text-quinary"
-        } dark:bg-transparent dark:hover:bg-`}
+        className={`bg-transparent text-quaternary font-bold hover:bg-gray-700 text-lg sm:hover:text-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center `}
         type="button"
       >
         Products{" "}

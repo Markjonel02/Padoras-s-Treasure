@@ -1,10 +1,10 @@
 /* import { useState, useEffect } from "react"; */
 
-import HomeImageCon from "../components/HomeImageCon";
+import HomeImageCon from "./HomeImageCon";
 const Home = () => {
   return (
     <>
-      <div className=" bg-black">
+      <div>
         <HomeImageCon />
       </div>
     </>

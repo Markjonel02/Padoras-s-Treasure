@@ -1,6 +1,10 @@
 const HomeSection = () => {
   return (
-    <div className="banner p-4 items-center m-12 flex flex-wrap justify-center gap-8  ">
+    <div
+      className="banner p-4 items-center m-12 flex flex-wrap justify-center gap-8"
+      data-aos="zoom-in"
+      data-aos-duration="900"
+    >
       <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
         <div className="inline-flex items-center justify-center p-2 bg-primary rounded-md shadow-lg">
           <svg

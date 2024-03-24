@@ -17,7 +17,7 @@ const Layout = () => {
   ];
 
   const linkStyle = `text-quaternary ${
-    isScroll && "dark:text-quinary"
+    isScroll && "dark:text-quaternary"
   } hover:bg-gray-700  sm:inline-block sm:hover:text-gray-300 rounded-md px-3 py-2 font-bold text-lg`;
 
   const activeStyle = "text-red-200";

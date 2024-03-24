@@ -6,8 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 // eslint-disable-next-line no-unused-vars
-import PropTypes from "prop-types";
+
 import { ScrollProvider } from "./context/Context";
+// eslint-disable-next-line react-refresh/only-export-components
 const AOS = () => {
   useEffect(() => {
     Aos.init();

@@ -3,7 +3,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 export default {
   content: [  "./index.html",
-  "./src/**/*.{js,ts,jsx,tsx}",],
+  "./src/**/*.{js,ts,jsx,tsx}",
+'node_modules/flowbite-react/lib/esm/**/*.js'],
+darkMode: 'media',
+
   theme: {
     extend: {
       fontFamily: {
@@ -17,9 +20,12 @@ export default {
         'quinary': '#D9D9D9',
         'dark-pink':'#9e8689ff',
         'dark-mode': '#0f1729ff',
+        'darks':'#1e293bff'
       }
     },
   },
-  plugins: [],
+  plugins: [
+     require('flowbite/plugin')
+  ],
 }
 

@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import Layout from "./Layout";
 import { NavLink } from "react-router-dom";
 import Aos from "aos";
-
+import { useScrollContext } from "../context/Context";
 const Navigation = () => {
+  const { isScroll } = useScrollContext();
+
   useEffect(() => {
     Aos.init();
 
@@ -14,30 +16,6 @@ const Navigation = () => {
 
   const [NavisOpen, setNavisOpen] = useState(false);
   const [isShow, setisShow] = useState(false);
-  const [isScroll, setisScroll] = useState(false);
-  const [Dimension, setDimension] = useState(window.innerWidth >= 700);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setDimension(window.innerWidth >= 700);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  });
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollToTop = window.scrollY;
-      setisScroll(scrollToTop > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const show = () => {
     setisShow(!isShow);
@@ -49,9 +27,9 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 transition duration-300 p-3  ${
+      className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
         isScroll
-          ? " text-quaternary bg-opacity-55  backdrop-blur-md backdrop-saturate-154 rounded-lg  shadow-sm dark:bg-dark-mode"
+          ? "bg-opacity-55  backdrop-blur-md backdrop-saturate-154 rounded-lg  shadow-sm dark:bg-darks "
           : "bg-transparent"
       }`}
     >
@@ -85,7 +63,7 @@ const Navigation = () => {
               </svg>
               {/* Icon when menu is open */}
               <svg
-                className={`${NavisOpen ? "block" : "hidden"}  h-6 w-6`}
+                className={`${NavisOpen ? "block" : "hidden"} h-6 w-6`}
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
@@ -100,14 +78,15 @@ const Navigation = () => {
               </svg>
             </button>
           </div>
-          {Dimension && (
-            <div className="flex flex-shrink-0 items-center">
-              <h1 className="text-quaternary dark:text-quinary text-5xl font-Roboto font-bold ">
-                Pandora
-              </h1>
-            </div>
-          )}
-
+          <div className="flex flex-shrink-0 items-center">
+            <h1
+              className={`text-quaternary text-5xl font-Roboto font-bold ${
+                isScroll && "dark:text-quinary"
+              }`}
+            >
+              Pandora
+            </h1>
+          </div>
           <div className="hidden sm:flex items-center justify-center">
             <div className="flex space-x-4 font-medium">
               <Layout />
@@ -116,7 +95,7 @@ const Navigation = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full p-1 text-gray-400 dark: hover:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
+              className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
             >
               <span className="absolute -inset-1.5"></span>
               <span className="sr-only">View notifications</span>
@@ -168,7 +147,7 @@ const Navigation = () => {
               <div
                 className={`${
                   isShow ? "absolute" : "hidden"
-                } dropdown  right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                } dark:bg-darks dark:text-quinary text-lg dropdown  right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"

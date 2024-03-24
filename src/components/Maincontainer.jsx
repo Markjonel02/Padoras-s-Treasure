@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-const Maincontainer = ({ children }) => {
-  return <div>{children}</div>;
+const Maincontainer = ({ children, className }) => {
+  return <div className={className}>{children}</div>;
 };
 Maincontainer.propTypes = {
   children: PropTypes.node.isRequired,

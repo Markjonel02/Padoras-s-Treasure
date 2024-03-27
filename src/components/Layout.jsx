@@ -16,8 +16,8 @@ const Layout = () => {
     { to: "/contact", text: "Contact" },
   ];
 
-  const linkStyle = `text-quaternary ${
-    isScroll && "dark:text-quaternary"
+  const linkStyle = `text-gray-800 ${
+    isScroll && "dark:text-quinary"
   } hover:bg-gray-700  sm:inline-block sm:hover:text-gray-300 rounded-md px-3 py-2 font-bold text-lg`;
 
   const activeStyle = "text-red-200";

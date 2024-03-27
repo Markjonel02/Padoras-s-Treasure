@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { useScrollContext } from "../context/Context";
 const Productsdrop = () => {
+  const { isScroll } = useScrollContext();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const { isScroll } = useScrollContext();
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -26,7 +27,9 @@ const Productsdrop = () => {
       <button
         id="dropdownHoverButton"
         onClick={toggleDropdown}
-        className={`bg-transparent text-quaternary font-bold hover:bg-gray-700 text-lg sm:hover:text-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center `}
+        className={`bg-transparent text-quaternary font-bold hover:bg-gray-700 text-lg sm:hover:text-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center ${
+          isScroll && "dark:text-quinary"
+        }`}
         type="button"
       >
         Products{" "}

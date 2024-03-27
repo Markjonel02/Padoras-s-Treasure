@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Loaders } from "./components/Loaders";
-
+import { LoadPageProvider } from "./context/LazyContext";
 const Navigation = lazy(() => import("./components/Navigation"));
 const Home = lazy(() => import("./routers/Home"));
 const Maincontainer = lazy(() => import("./components/Maincontainer"));
@@ -15,22 +15,25 @@ const App = () => {
     "flex",
     "items-center",
     "justify-center",
-    "dark:bg-darks  ",
+    "antialiased",
+    "dark:bg-darks",
   ].join("");
 
   return (
     <>
-      <Suspense fallback={Loaders}>
-        <div className="nav">
-          <Navigation />
-        </div>
-        <Maincontainer className={mainContainerClasses}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </Maincontainer>
-      </Suspense>
+      <LoadPageProvider>
+        <Suspense fallback={<Loaders />}>
+          <div className="nav">
+            <Navigation />
+          </div>
+          <Maincontainer className={mainContainerClasses}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </Maincontainer>
+        </Suspense>
+      </LoadPageProvider>
     </>
   );
 };

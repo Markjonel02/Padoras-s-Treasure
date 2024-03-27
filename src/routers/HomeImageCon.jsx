@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import HomeSection from "./HomeSection";
 import { Loaders } from "../components/Loaders";
+import ProductsOverview from "./ProductsOverview";
+
 const HomeImageCon = () => {
   const [imageLoad, setImageLoad] = useState(false);
 
@@ -29,12 +31,12 @@ const HomeImageCon = () => {
 
   return (
     <>
-      <div className="relative h-screen shadow w-screen">
+      <div className="relative h-screen shadow w-screen dark:bg-darks">
         {imageLoad ? (
           <>
-            <div className="relative h-screen w-full shadow">
+            <div className="relative h-screen w-full shadow ">
               <div
-                className="absolute inset-0 bg-black opacity-50"
+                className="absolute inset-0 bg-gray-700 opacity-50 z-10 bg-gradient-to-l from-quinary to-primary/50"
                 style={{ mixBlendMode: "multiply" }}
               ></div>
 
@@ -50,13 +52,13 @@ const HomeImageCon = () => {
               {/* Content */}
               <div className="absolute inset-0 flex items-center justify-center flex-col z-20 text-center shadow-sm">
                 <h1
-                  className="text-5xl xl:text-6xl md:text-6xl sm:text-5xl font-extrabold dark:text-quaternary text-quinary"
+                  className="text-5xl xl:text-6xl md:text-6xl sm:text-5xl font-extrabold text-white"
                   data-aos="zoom-out"
                 >
                   Pandora<span>&apos;</span>s Treasure
                 </h1>
                 <p
-                  className="sm:text-xl text-2xl md:text-2xl dark:text-quaternary text-quinary"
+                  className="sm:text-xl text-2xl md:text-2xl  text-white dark:text-white"
                   data-aos="zoom-out"
                   data-aos-duration="1500"
                 >
@@ -64,8 +66,20 @@ const HomeImageCon = () => {
                 </p>
               </div>
             </div>
-            <HomeSection />
-            <Footer />
+            <div className="section">
+              <HomeSection />
+            </div>
+            <div
+              className="prod-overview"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <ProductsOverview />
+            </div>
+
+            <div className="foot">
+              <Footer />
+            </div>
           </>
         ) : (
           <Loaders />

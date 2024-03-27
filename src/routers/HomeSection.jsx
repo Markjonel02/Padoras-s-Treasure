@@ -1,7 +1,7 @@
 const HomeSection = () => {
   return (
     <div
-      className="banner p-4 items-center m-12 flex flex-wrap justify-center gap-8"
+      className="banner p-4 items-center m-12 flex flex-wrap justify-center gap-8 "
       data-aos="zoom-in"
       data-aos-duration="900"
     >

@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <>
-      <div className="about-section top-2/4 right-0 left-0">
-        <h1 className="text-3xl">About Page</h1>
+      <div className="about-section h-screen w-screen flex justify-center items-center ">
+        <h1 className="text-3xl ">About Page</h1>
       </div>
     </>
   );

@@ -41,7 +41,7 @@ const Navigation = () => {
     <nav
       className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
         isScroll
-          ? "bg-opacity-55  backdrop-blur-md backdrop-saturate-154 rounded-lg  shadow  "
+          ? "bg-primary bg-opacity-55 dark:bg-darks backdrop-blur-3xl backdrop-saturate-50 rounded-lg  shadow  "
           : "bg-transparent"
       }`}
     >
@@ -52,7 +52,9 @@ const Navigation = () => {
             <button
               onClick={toggleNav}
               type="button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-quaternary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white "
+              className={`relative inline-flex items-center justify-center rounded-md p-2 text-text-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${
+                isScroll && "dark:text-white"
+              }`}
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -92,8 +94,8 @@ const Navigation = () => {
           </div>
           <div className="flex flex-shrink-0 items-center">
             <h1
-              className={`text-quaternary text-5xl font-Roboto font-bold ${
-                isScroll && "dark:text-quaternary"
+              className={`text-gray-800 text-5xl font-Roboto font-bold ${
+                isScroll ? "dark:text-quinary " : ""
               }`}
               style={{ display: isVisible ? "block" : "none" }}
             >
@@ -108,7 +110,9 @@ const Navigation = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full p-1 text-quaternary hover:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
+              className={`relative rounded-full p-1 text-gray-800  hover:text-white  focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+                isScroll && "dark:text-white"
+              }`}
             >
               <span className="absolute -inset-1.5"></span>
               <span className="sr-only">View notifications</span>
@@ -134,7 +138,9 @@ const Navigation = () => {
                 <button
                   type="button"
                   onClick={show}
-                  className="relative flex rounded-full p-1 text-sm hover:text-white text-quaternary focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
+                  className={`relative flex rounded-full p-1 text-sm hover:text-gray-700  text-quaternary focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+                    isScroll && "dark:text-white"
+                  }`}
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"

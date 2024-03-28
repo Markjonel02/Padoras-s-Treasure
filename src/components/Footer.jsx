@@ -13,7 +13,7 @@ const Footer = () => {
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 ">
             {[
               { title: "Resources", links: ["Flowbite", "Tailwind CSS"] },
               { title: "Follow us", links: ["Github", "Discord"] },

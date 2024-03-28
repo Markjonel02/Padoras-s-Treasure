@@ -1,4 +1,4 @@
-import{ createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
 export const LazyContext = createContext();

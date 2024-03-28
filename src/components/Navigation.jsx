@@ -41,8 +41,8 @@ const Navigation = () => {
     <nav
       className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
         isScroll
-          ? "bg-primary bg-opacity-55 dark:bg-darks backdrop-blur-3xl backdrop-saturate-50 rounded-lg  shadow  "
-          : "bg-transparent"
+          ? " bg-opacity-55 bg-primary dark:bg-darks backdrop-blur-3xl backdrop-saturate-50 rounded-lg shadow "
+          : "bg-transparent "
       }`}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between">

@@ -1,27 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* src/styles/tailwind.css */
 
-
-
-
 @layer base {
-  
+   @font-face {
+    font-family: "Roboto-LightItalic";
+    font-style: italic;
+    src: url("assets/fonts/Roboto-LightItalic.ttf") format("truetype");
+  }
+
   @font-face {
-  font-family: 'CustomFont';
-  src: url('assets/fonts/Roboto-Regular.ttf') format('ttf'),
-       url('assets/fonts/Roboto-Medium.ttf') format('ttf'),
-       url('assets/fonts/Roboto-Bold.ttf') format('ttf'),
-       url('assets/fonts/Roboto-Black.ttf') format('ttf');
-}
+    font-family: "Roboto-Regular";
+    font-style: normal;
+    src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Roboto-Medium";
+    font-style: normal;
+    src: url("assets/fonts/Roboto-Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Roboto-Bold";
+    font-style: normal;
+    src: url("assets/fonts/Roboto-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Roboto-Black";
+    font-style: normal;
+    src: url("assets/fonts/Roboto-Black.ttf") format("truetype");
+  }
+
   * {
     font-family: "Roboto", sans;
-    @apply m-0 p-0 scroll-smooth
-    
+    @apply m-0 p-0 scroll-smooth scroll-m-3 ease-in;
   }
-  .main{
-    @apply dark:bg-darks overflow-x-hidden
+  .main {
+    @apply dark:bg-darks overflow-x-hidden;
   }
 }

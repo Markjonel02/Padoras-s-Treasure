@@ -2,15 +2,12 @@ import logo from "../assets/imgs/products/logo-light.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900 border shadow-2 overflow-x-hidden ">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <footer className="bg-secondary dark:bg-gray-900 border shadow-2 overflow-x-hidden">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 ">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center">
-              <img src={logo} className=" w-32  me-3" alt="Pandora Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Pandora
-              </span>
+              <img src={logo} className="w-32 me-3" alt="Pandora Logo" />
             </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 ">

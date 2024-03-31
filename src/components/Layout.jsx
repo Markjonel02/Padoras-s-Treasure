@@ -1,10 +1,12 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { useScrollContext } from "../context/Context";
 import { useState } from "react";
 import Productsdrop from "../routers/Productsdrop";
+
 const Layout = () => {
   const { isScroll } = useScrollContext();
-  const [activeLink, setActiveLink] = useState(null);
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(location.pathname);
 
   const handleNavLinkClick = (to) => {
     setActiveLink(to);
@@ -18,25 +20,28 @@ const Layout = () => {
 
   const linkStyle = `text-gray-800 ${
     isScroll && "dark:text-quinary"
-  } hover:bg-gray-700  sm:inline-block sm:hover:text-gray-300 rounded-md px-3 py-2 font-bold text-lg`;
+  } hover:bg-gray-700  sm:inline-block sm:hover:text-gray-300 rounded-md px-3 py-2.5 font-bold text-lg`;
 
   const activeStyle = "text-red-200";
 
   return (
     <>
-      <div className="flex justify-center mt-2">
+      <div className="flex justify-center ">
         {navLinks.map(({ to, text }) => (
           <NavLink
             onClick={() => handleNavLinkClick(to)}
             key={to}
             to={to}
-            activeClassName={activeLink === to ? activeStyle : ""}
+            isActive={() => activeLink === to}
+            activeClassName={activeStyle}
             className={linkStyle}
           >
             {text}
           </NavLink>
         ))}
-        <Productsdrop />
+        <div className="m-0">
+          <Productsdrop />
+        </div>
       </div>
 
       <Outlet />

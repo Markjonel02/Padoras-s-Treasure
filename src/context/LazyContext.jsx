@@ -15,11 +15,9 @@ export const LoadPageProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const delay = setTimeout(() => {
+    setTimeout(() => {
       setIsLoading(true);
     }, 3000);
-
-    return () => clearTimeout(delay);
   }, []);
 
   return (

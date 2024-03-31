@@ -41,6 +41,8 @@ const ProductsOverview = () => {
       className={`container mx-auto antialiased `}
       spaceBetween={10}
       breakpoints={breakpoints}
+      data-aos="fade-right"
+      data-aos-duration="1000"
     >
       {[...Array(10).keys()].map((index) => (
         <SwiperSlide key={index}>
@@ -65,13 +67,13 @@ const ProductsOverview = () => {
                 <h5 className="text-red text-xl font-lighter tracking-wide uppercase dark:text-white  mt-2 leading-loose">
                   shea butter
                 </h5>
-                <p className="text-gray-700 text-base dark:text-gray-300">
+                <p className="text-gray-700 text-base dark:text-gray-300 0000 mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Deleniti natus et quas dicta? Blanditiis, provident.
                 </p>
 
-                <p className="price text-quaternary font-bold dark:text-white">
-                  <span>&#8369;</span> 200
+                <p className="price text-quaternary font-bold dark:text-white text-xl">
+                  Php 200.00
                 </p>
               </div>
             </div>

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+/* const defaultTheme = require('tailwindcss/defaultTheme') */
 export default {
   content: [  "./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,9 +9,14 @@ darkMode: 'media',
 
   theme: {
     extend: {
-      fontFamily: {
-               'Roboto': ['"Roboto",', ...defaultTheme.fontFamily.sans],
-      },
+   fontFamily: {
+      'Roboto-LightItalic': ['Roboto-LightItalic', 'serif'],
+      'Roboto-Regular': ['Roboto-Regular', 'serif'],
+      'Roboto-Medium': ['Roboto-Medium', 'serif'],
+      'Roboto-Bold': ['Roboto-Bold', 'serif'],
+      'Roboto-Black': ['Roboto-Black', 'serif'],
+      
+    },
       colors: {
         'primary': '#d1c7c7ff',
         'secondary': '#FAF5F3',

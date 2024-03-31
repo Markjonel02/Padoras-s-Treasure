@@ -5,9 +5,8 @@ import HomeSection from "./HomeSection";
 import { Loaders } from "./Loaders";
 import ProductsOverview from "./ProductsOverview";
 import Homebanner from "./Homebanner";
-import { useLazyContext } from "../context/LazyContext";
+
 const HomeImageCon = () => {
-  const { isLoading } = useLazyContext();
   const [imageLoad, setImageLoad] = useState(false);
 
   useEffect(() => {
@@ -80,20 +79,18 @@ const HomeImageCon = () => {
               data-aos-duration="1000"
             >
               <ProductsOverview />
+              <div className="btn flex  justify-center items-center mb-10">
+                <button className="px-4 py-2 rounded bg-primary text-gray-700 text-lg  font-Roboto font-medium hover:animate-pulse hover:scale-105  ease-in ">
+                  See more
+                </button>
+              </div>
+            </div>
+            <div className="foot  overflow-x-hidden ">
+              <Footer />
             </div>
           </>
         ) : (
           <Loaders />
-        )}
-
-        {isLoading ? (
-          <div className="foot  overflow-x-hidden ">
-            <Footer />
-          </div>
-        ) : (
-          <>
-            <Loaders />
-          </>
         )}
       </div>
     </>

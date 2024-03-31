@@ -41,18 +41,18 @@ const Navigation = () => {
     <nav
       className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
         isScroll
-          ? " bg-opacity-55 bg-primary dark:bg-darks backdrop-blur-3xl backdrop-saturate-50 rounded-lg shadow "
+          ? " bg-opacity-55 bg-secondary dark:bg-darks backdrop-blur-3xl backdrop-saturate-50 rounded-lg shadow  "
           : "bg-transparent "
       }`}
     >
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between font-Roboto-medium">
         <div className="relative flex h-16 items-center justify-between w-full">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
             <button
               onClick={toggleNav}
               type="button"
-              className={`relative inline-flex items-center justify-center rounded-md p-2 text-text-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${
+              className={`relative inline-flex items-center justify-center rounded-md p-2 text-text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${
                 isScroll && "dark:text-white"
               }`}
               aria-controls="mobile-menu"
@@ -94,7 +94,7 @@ const Navigation = () => {
           </div>
           <div className="flex flex-shrink-0 items-center">
             <h1
-              className={`text-gray-800 text-5xl font-Roboto font-bold ${
+              className={`text-gray-800 text-5xl font-Roboto-Bold  ${
                 isScroll ? "dark:text-quinary " : ""
               }`}
               style={{ display: isVisible ? "block" : "none" }}
@@ -110,7 +110,7 @@ const Navigation = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className={`relative rounded-full p-1 text-gray-800  hover:text-white  focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+              className={`relative rounded-full p-1 text-gray-800   focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
                 isScroll && "dark:text-white"
               }`}
             >
@@ -138,7 +138,7 @@ const Navigation = () => {
                 <button
                   type="button"
                   onClick={show}
-                  className={`relative flex rounded-full p-1 text-sm hover:text-gray-700  text-quaternary focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+                  className={`relative flex rounded-full p-1 text-sm   text-gray-800 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
                     isScroll && "dark:text-white"
                   }`}
                   id="user-menu-button"
@@ -149,9 +149,9 @@ const Navigation = () => {
                   <span className="sr-only">Open user menu</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
+                    fill="none"
                     stroke="currentColor"
                     className="w-6 h-6"
                   >

@@ -2,7 +2,7 @@ const HomeSection = () => {
   return (
     <div
       className="banner p-4 items-center m-12 flex flex-wrap justify-center gap-8 "
-      data-aos="zoom-in"
+      data-aos="fade-left"
       data-aos-duration="900"
     >
       <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
@@ -22,7 +22,7 @@ const HomeSection = () => {
             />
           </svg>
         </div>
-        <h3 className="text-quaternary dark:text-white mt-5 text-base font-medium tracking-tight">
+        <h3 className="text-quaternary dark:text-white mt-5 text-base font-medium tracking-tight ">
           Easy To Refund
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">

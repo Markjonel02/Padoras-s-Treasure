@@ -1,8 +1,9 @@
 import { useLazyContext } from "../context/LazyContext";
 import { Loaders } from "../components/Loaders";
-import AboutHero from "../components/AboutHero";
+import AboutHero from "../components/Aboutcom/AboutHero";
 import svg from "../assets/imgs/svgs/aboutsvgs/about_imgmodel2.svg";
 import circle from "../assets/imgs/svgs/aboutsvgs/circle-blob.svg";
+import Footer from "../components/Footer";
 
 const About = () => {
   const { isLoading } = useLazyContext();
@@ -13,7 +14,7 @@ const About = () => {
           <div className="about-section bg-primary relative h-screen flex justify-center items-center flex-col ">
             <div className="first-slid flex justify-end items-center ">
               <div className="flex justify-between  h-full mt-12 xl:flex-row  ">
-                <div className="text-con flex justify-center items-center w-full  ml-0 md:ml-10 xl:ml-28">
+                <div className="text-con flex justify-center items-center w-1/2  ml-0 md:ml-10 xl:ml-28">
                   <h5
                     className="text-secondary text-4xl md:text-5xl xl:text-6xl font-Roboto-Black  text-center md:text-left"
                     data-aos="fade-right"
@@ -48,8 +49,11 @@ const About = () => {
             </div>
           </div>
           <div className="about-container ">
-           
             <AboutHero />
+          </div>
+
+          <div className="foot mt-28">
+            <Footer />
           </div>
         </>
       ) : (

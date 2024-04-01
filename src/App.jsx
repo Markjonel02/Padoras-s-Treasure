@@ -2,11 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Loaders } from "./components/Loaders";
 import { LoadPageProvider } from "./context/LazyContext";
+
 const Navigation = lazy(() => import("./components/Navigation"));
 const Home = lazy(() => import("./routers/Home"));
 const Maincontainer = lazy(() => import("./components/Maincontainer"));
 const About = lazy(() => import("./routers/About"));
-
+const Faq = lazy(() => import("./components/Faq"));
 const App = () => {
   const mainContainerClasses = [
     "main",
@@ -33,6 +34,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/faq" element={<Faq />} />
             </Routes>
           </Maincontainer>
         </Suspense>

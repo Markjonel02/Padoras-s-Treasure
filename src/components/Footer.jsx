@@ -6,13 +6,13 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 ">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="#" className="flex items-center">
-              <img src={logo} className="w-32 me-3" alt="Pandora Logo" />
+            <a href="/" className="flex items-center justify-center">
+              <img src={logo} className="w-[200px] me-3" alt="Pandora Logo" />
             </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 ">
             {[
-              { title: "Resources", links: ["Flowbite", "Tailwind CSS"] },
+              { title: "Resources", links: ["React", "Tailwind CSS"] },
               { title: "Follow us", links: ["Github", "Discord"] },
               {
                 title: "Legal",

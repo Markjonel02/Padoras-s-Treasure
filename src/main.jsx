@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import App from "./App.jsx";
 import "./index.css";
-import { BrowserRouter } from "react-router-dom";
 import Aos from "aos";
+import "swiper/css";
 import "aos/dist/aos.css";
+
+/* import { PrimeReactProvider } from "primereact/api"; */
 import { LoadPageProvider } from "./context/LazyContext.jsx";
 import { ScrollProvider } from "./context/Context";
-import "swiper/css";
+import { BrowserRouter } from "react-router-dom";
 const AOS = () => {
   useEffect(() => {
     Aos.init();

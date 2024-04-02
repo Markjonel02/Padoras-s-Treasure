@@ -1,8 +1,8 @@
-import React from "react";
 import ung from "../assets/imgs/products/1.png";
 import logo from "../assets/imgs/products/2.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
+import { Ripple } from "primereact/ripple";
 
 const ProductsOverview = () => {
   const breakpoints = {
@@ -53,13 +53,15 @@ const ProductsOverview = () => {
                 src={logo}
                 alt="logo"
               />
-              <div className="relative">
+              <div className="relative p-ripple">
                 <img
                   className="w-full h-60 object-cover hover:animate-bounce sm:"
                   height
                   src={ung}
                   alt="ung"
                 />
+
+                <Ripple />
                 <div className="absolute inset-0 bg-primary opacity-20"></div>
                 <div className="absolute inset-0 flex justify-center items-center"></div>
               </div>

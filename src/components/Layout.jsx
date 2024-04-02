@@ -2,7 +2,7 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { useScrollContext } from "../context/Context";
 import { useState } from "react";
 import Productsdrop from "../routers/Productsdrop";
-
+import { Ripple } from "primereact/ripple";
 const Layout = () => {
   const { isScroll } = useScrollContext();
   const location = useLocation();
@@ -19,7 +19,7 @@ const Layout = () => {
     { to: "/faq", text: "Faq" },
   ];
 
-  const linkStyle = `text-gray-800 ${
+  const linkStyle = ` p-ripple text-gray-800 ${
     isScroll && "dark:text-quinary"
   } hover:bg-gray-700  sm:inline-block sm:hover:text-gray-300 rounded-md px-3 py-2.5 font-bold text-lg`;
 
@@ -38,9 +38,10 @@ const Layout = () => {
             className={linkStyle}
           >
             {text}
+            <Ripple />
           </NavLink>
         ))}
-        <div className="m-0">
+        <div className="mx-2">
           <Productsdrop />
         </div>
       </div>

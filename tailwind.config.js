@@ -10,11 +10,18 @@ darkMode: 'media',
   theme: {
     extend: {
    fontFamily: {
+
       'Roboto-LightItalic': ['Roboto-LightItalic', 'serif'],
       'Roboto-Regular': ['Roboto-Regular', 'serif'],
       'Roboto-Medium': ['Roboto-Medium', 'serif'],
       'Roboto-Bold': ['Roboto-Bold', 'serif'],
       'Roboto-Black': ['Roboto-Black', 'serif'],
+      'Roboto-BlackItalic': ['Roboto-BlackItalic', 'serif'],
+      'Roboto-Light': ['Roboto-Light', 'serif'],
+      'Roboto-ThinItalic': ['Roboto-ThinItalic', 'serif'],
+      'Roboto-Thin': ['Roboto-Thin', 'serif'],
+      'Roboto-MediumItalic': ['Roboto-MediumItalic', 'serif'],
+                            
       
     },
       colors: {

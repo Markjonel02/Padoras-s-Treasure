@@ -7,7 +7,7 @@ const WhyShopPandoraCosmetics = () => {
 
   return (
     <section
-      className="why-shop-section bg-gray-100 py-8 sm:py-10 lg:py-12 mt-10 text-quaternary"
+      className="why-shop-section bg-gray-100 py-8 sm:py-10 lg:py-12 mt-20 text-quaternary"
       data-aos="fade-right"
       data-aos-duration="800"
     >
@@ -25,7 +25,7 @@ const WhyShopPandoraCosmetics = () => {
               stroke="currentColor"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className="w-12 h-12 sm:w-16 sm:h-16 mb-2 sm:mb-4 hover:animate-bounce ease"
+              className="w-12 h-12 sm:w-16 sm:h-16 mb-2 sm:mb-4 hover:animate-pulse ease"
             >
               <path
                 strokeLinecap="round"

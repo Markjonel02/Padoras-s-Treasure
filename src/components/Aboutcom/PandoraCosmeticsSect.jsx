@@ -1,9 +1,9 @@
 import video from "../../assets/video/Cosmetics.mp4";
+import { Ripple } from "primereact/ripple";
 
 const PandoraCosmeticsSect = () => {
   return (
     <>
-      {" "}
       <section className="pandora-cosmetics-section bg-white py-8 md:py-12  text-quaternary">
         <div className="container mx-auto sm:flex-col  md:flex-row lg:flex-col p-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
@@ -45,12 +45,17 @@ const PandoraCosmeticsSect = () => {
                 glamorous look for a special occasion, Pandora Cosmetics has
                 everything you need to create your signature style.
               </p>
-              <a
-                href="/shop"
-                className="bg-primary flex justify-center text-white py-1 md:py-2 px-2 md:px-4 w-32 rounded-md text-sm md:text-base hover:bg-primary-dark transition duration-300"
-              >
-                Shop Now
-              </a>
+              <div className="sample">
+                {/*    <PrimeReactProvider value={{ ripple: true }}> */}
+                <a
+                  href="#"
+                  className="p-ripple bg-primary flex justify-center text-white py-1 md:py-2 px-2 md:px-4 w-32 rounded-md text-sm md:text-base   "
+                >
+                  Shop Now
+                  <Ripple />
+                </a>
+                {/*    </PrimeReactProvider> */}
+              </div>
             </div>
           </div>
         </div>

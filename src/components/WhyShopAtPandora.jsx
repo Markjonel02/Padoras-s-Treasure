@@ -7,11 +7,11 @@ const WhyShopPandoraCosmetics = () => {
 
   return (
     <section
-      className="why-shop-section bg-gray-100 py-8 sm:py-10 lg:py-12 mt-20 text-quaternary"
+      className="why-shop-section bg-gray-100 py-8 sm:py-10 lg:py-12 mt-20 text-quaternary dark:bg-darks dark:text-white"
       data-aos="fade-right"
       data-aos-duration="800"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <h2 className="text-xl sm:text-2xl lg:text-5xl font-semibold text-center xl:mb-20 sm:mb-8">
           Why Choose Pandora?
         </h2>
@@ -19,7 +19,7 @@ const WhyShopPandoraCosmetics = () => {
           <div className="flex flex-col items-center px-4 sm:px-0 rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill={isHovered ? "#d1c7c7ff" : "none"}
+              fill={isHovered ? "#FCA5A5" : "none"}
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
@@ -37,7 +37,7 @@ const WhyShopPandoraCosmetics = () => {
             <h3 className="text-lg sm:text-xl font-medium mb-1">
               High-Quality Ingredients
             </h3>
-            <p className="text-sm sm:text-base text-gray-700 text-center">
+            <p className="text-sm sm:text-base text-gray-700 text-center  dark:text-quinary">
               Crafted with premium ingredients for superior performance and
               results.
             </p>
@@ -63,7 +63,7 @@ const WhyShopPandoraCosmetics = () => {
             <h3 className="text-lg sm:text-xl font-medium mb-1">
               Extensive Product Range
             </h3>
-            <p className="text-sm sm:text-base text-gray-700 text-center">
+            <p className="text-sm sm:text-base text-gray-700 text-center  dark:text-quinary">
               Discover a wide selection of cosmetics for every skin type and
               style preference.
             </p>
@@ -89,7 +89,7 @@ const WhyShopPandoraCosmetics = () => {
             <h3 className="text-lg sm:text-xl font-medium mb-1">
               Exceptional Support
             </h3>
-            <p className="text-sm sm:text-base text-gray-700 text-center">
+            <p className="text-sm sm:text-base text-gray-700 text-center  dark:text-quinary">
               Our dedicated team is here to assist you with personalized
               recommendations and assistance.
             </p>
@@ -115,7 +115,7 @@ const WhyShopPandoraCosmetics = () => {
             <h3 className="text-lg sm:text-xl font-medium mb-1 ">
               Cruelty-Free
             </h3>
-            <p className="text-sm sm:text-base text-gray-700 text-center">
+            <p className="text-sm sm:text-base text-gray-700 text-center  dark:text-quinary">
               We are committed to ethical practices and never test on animals.
             </p>
           </div>

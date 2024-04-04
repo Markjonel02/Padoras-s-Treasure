@@ -11,7 +11,7 @@ const About = () => {
     <>
       {isLoading ? (
         <>
-          <div className="about-section bg-primary relative h-screen flex flex-col justify-center items-center">
+          <div className="about-section bg-primary relative h-screen flex flex-col justify-center items-center dark:bg-darks">
             <div className="first-slid flex flex-col md:flex-row justify-between items-center mt-32">
               <div className="text-con w-full md:w-1/2 ml-0 md:ml-10 xl:ml-28">
                 <h5

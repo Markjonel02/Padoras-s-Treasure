@@ -1,13 +1,50 @@
 import logo from "../assets/imgs/products/logo-light.png";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const [isDark, setIsDark] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+
+  useEffect(() => {
+    const handleColorSchemeChange = (e) => {
+      setIsDark(e.matches);
+    };
+
+    const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+
+    mediaQueryList.addEventListener("change", handleColorSchemeChange);
+
+    return () => {
+      mediaQueryList.removeEventListener("change", handleColorSchemeChange);
+    };
+  }, []);
+
   return (
-    <footer className="bg-secondary dark:bg-gray-900 border shadow-2 overflow-x-hidden ">
+    <footer
+      className={`bg-secondary ${
+        isDark ? "dark:bg-darks" : ""
+      } border shadow-2 overflow-x-hidden `}
+    >
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 ">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center justify-center">
-              <img src={logo} className="w-[200px] me-3" alt="Pandora Logo" />
+              {isDark ? (
+                <>
+                  <span className="self-center text-xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-2xl font-Roboto-Black whitespace-nowrap dark:text-white">
+                    Flowbite
+                  </span>
+                </>
+              ) : (
+                <>
+                  <img
+                    src={isDark ? "" : logo}
+                    className="w-[200px] me-3"
+                    alt="Pandora Logo"
+                  />
+                </>
+              )}
             </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 ">

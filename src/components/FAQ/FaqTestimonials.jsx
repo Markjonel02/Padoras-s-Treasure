@@ -21,6 +21,9 @@ const FaqTestimonials = () => {
   };
   return (
     <>
+      <h1 className="text-xl  xl:text-5xl md:text-4xl sm:text-3xl  flex justify-center font-Roboto-Black dark:text-quinary text-gray-800">
+        Customer{"'"}s Review
+      </h1>
       <Swiper
         autoplay={{
           delay: 2500,
@@ -31,9 +34,9 @@ const FaqTestimonials = () => {
         pagination={Pagination}
         navigation
         grabCursor="true"
-        className="flex justify-center items-center mt-10 mb-20  h-full p-5"
+        className="flex justify-center items-center mt-10 mb-20  h-full p-5 "
       >
-        <div className="testimonials flex justify-center align-middle text-quaternary font-Roboto-LightItalic">
+        <div className="testimonials flex justify-center align-middle text-quaternary font-Roboto-LightItalic dark:bg-darks ">
           <SwiperSlide className="flex justify-center p-3">
             <figure className="max-w-screen-md mx-auto  border border-gray-200 p-6 rounded-xl shadow-xl ">
               <svg
@@ -54,6 +57,7 @@ const FaqTestimonials = () => {
                   <span>&quot;</span>
                 </p>
               </blockquote>
+              <Ripple />
               <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
                 <img
                   className="w-6 h-6 rounded-full"
@@ -91,6 +95,7 @@ const FaqTestimonials = () => {
                   <span>&quot;</span>
                 </p>
               </blockquote>
+
               <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
                 <img
                   className="w-6 h-6 rounded-full"

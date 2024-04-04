@@ -41,7 +41,7 @@ const Navigation = () => {
     <nav
       className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
         isScroll
-          ? " bg-opacity-55 bg-secondary dark:bg-darks backdrop-blur-3xl backdrop-saturate-50 rounded-lg shadow  "
+          ? " bg-opacity-55 bg-secondary dark:bg-transparent backdrop-blur-3xl backdrop-saturate-50 rounded-lg shadow  "
           : "bg-transparent "
       }`}
     >
@@ -94,7 +94,7 @@ const Navigation = () => {
           </div>
           <div className="flex flex-shrink-0 items-center">
             <h1
-              className={`text-gray-800 text-5xl font-Roboto-Bold  ${
+              className={`text-gray-800 text-5xl font-Roboto-Bold dark:text-white ${
                 isScroll ? "dark:text-quinary " : ""
               }`}
               style={{ display: isVisible ? "block" : "none" }}
@@ -110,7 +110,7 @@ const Navigation = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className={`relative rounded-full p-1 text-gray-800   focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+              className={`relative rounded-full p-1 text-gray-800   dark:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
                 isScroll && "dark:text-white"
               }`}
             >
@@ -132,7 +132,7 @@ const Navigation = () => {
               </svg>
             </button>
             <button
-              className={`relative rounded-full p-1 text-gray-800   focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+              className={`relative rounded-full p-1 text-gray-800    dark:text-white focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
                 isScroll && "dark:text-white"
               }`}
             >
@@ -158,7 +158,7 @@ const Navigation = () => {
                 <button
                   type="button"
                   onClick={show}
-                  className={`relative flex rounded-full p-1 text-sm   text-gray-800 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+                  className={`relative flex rounded-full p-1 text-sm   dark:text-white text-gray-800 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
                     isScroll && "dark:text-white"
                   }`}
                   id="user-menu-button"

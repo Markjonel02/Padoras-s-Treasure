@@ -11,7 +11,7 @@ const Faq = () => {
     <>
       {isLoading ? (
         <>
-          <div className="faq-wrapper relative flex flex-col bg-primary sm:flex-col md:flex-col lg:flex-row">
+          <div className="faq-wrapper relative flex flex-col bg-primary dark:bg-darks sm:flex-col md:flex-col lg:flex-row">
             <div className="w-full lg:w-2/3 min-h-screen flex justify-center items-center text-center flex-col">
               <h1
                 className="font-Roboto-Black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-4 text-white"

@@ -34,6 +34,7 @@ const App = () => {
             <div className="nav">
               <Navigation />
             </div>
+
             <Maincontainer className={mainContainerClasses}>
               <Routes>
                 <Route path="/" element={<Home />} />

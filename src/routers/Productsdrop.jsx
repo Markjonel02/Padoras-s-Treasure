@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useScrollContext } from "../context/Context";
+import { Ripple } from "primereact/ripple";
 const Productsdrop = () => {
   const { isScroll } = useScrollContext();
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +28,12 @@ const Productsdrop = () => {
       <button
         id="dropdownHoverButton"
         onClick={toggleDropdown}
-        className={`bg-transparent text-gray-800 font-bold hover:bg-gray-700 dark:text-white text-lg sm:hover:text-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center ${
+        className={` p-ripple bg-transparent text-gray-800 font-bold hover:bg-gray-700 dark:text-white text-lg sm:hover:text-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center ${
           isScroll && "dark:text-quinary"
         }`}
         type="button"
       >
-        Products{" "}
+        Products <Ripple />
         <svg
           className="w-2.5 h-2.5 ms-3"
           aria-hidden="true"

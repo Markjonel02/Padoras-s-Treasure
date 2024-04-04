@@ -19,9 +19,15 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsVisible(window.innerWidth >= 700);
+      if (window.innerWidth <= 768) {
+        setIsVisible(false);
+        localStorage.setItem("headerVisibility", "hidden");
+      } else {
+        setIsVisible(true);
+        localStorage.removeItem("headerVisibility");
+      }
     };
-
+    handleResize();
     // Listen for window resize events
     window.addEventListener("resize", handleResize);
 

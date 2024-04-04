@@ -32,8 +32,8 @@ const Footer = () => {
             <a href="/" className="flex items-center justify-center">
               {isDark ? (
                 <>
-                  <span className="self-center text-xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-2xl font-Roboto-Black whitespace-nowrap dark:text-white">
-                    Flowbite
+                  <span className=" tracking-wider self-center text-xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-2xl font-Roboto-Black whitespace-nowrap dark:text-white">
+                    Pandora
                   </span>
                 </>
               ) : (

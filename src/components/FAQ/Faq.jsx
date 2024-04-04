@@ -1,7 +1,7 @@
 import { useLazyContext } from "../../context/LazyContext";
 import { Loaders } from "../Loaders";
 import FaqSection from "./FaqSection";
-
+import Footer from "../Footer";
 import design from "../../assets/imgs/svgs/aboutsvgs/design.svg";
 import table from "../../assets/imgs/svgs/aboutsvgs/table.svg";
 import serum from "../../assets/imgs/svgs/aboutsvgs/Serum.svg";
@@ -47,7 +47,11 @@ const Faq = () => {
               </div>
             </div>
           </div>
-          <FaqSection />
+          <div className="faqs-sect mb-20">
+            <FaqSection />
+          </div>
+
+          <Footer />
         </>
       ) : (
         <>

@@ -1,18 +1,6 @@
 import { Ripple } from "primereact/ripple";
-import { Toast } from "primereact/toast";
-import { useRef } from "react";
-import { Button } from "primereact/button";
-const FaqForm = () => {
-  const toast = useRef(null);
 
-  const showSuccess = () => {
-    toast.current.show({
-      severity: "success",
-      summary: "Success",
-      detail: "Message Content",
-      life: 3000,
-    });
-  };
+const FaqForm = () => {
   return (
     <>
       <div className="title bg-primary dark:bg-darks text-white w-full flex justify-center items-center mb-20 flex-col">
@@ -70,20 +58,30 @@ const FaqForm = () => {
 
       <div className="container mx-auto px-4 ">
         <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-1/2 px-4">
-            <div className="p-8 bg-gray-100 rounded-lg">
+          <div
+            className="w-full md:w-1/2 px-4 mb-5 sm:mb-10 md:mb-10 "
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div className="p-8 bg-gray-100 dark:bg-quinary  rounded-lg text-quaternary">
               <h2 className="text-xl font-bold mb-4">Welcome to Our Website</h2>
               <p className="text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                lobortis orci eget libero efficitur mollis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, perspiciatis labore quibusdam, explicabo earum
+                incidunt quae consectetur iusto cupiditate itaque dignissimos
+                quis nisi? Alias suscipit minus ipsam iste facilis! Modi.
               </p>
             </div>
           </div>
 
           <div className="w-full md:w-1/2 px-4 text-quaternary">
-            <div className="p-8 bg-white rounded-lg shadow-xl">
+            <div
+              className="p-8 bg-white dark:bg-quinary rounded-lg shadow-xl"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
               <form className="max-w-xl mx-auto">
-                <h1 className="text-4xl mb-10 mt-5 font-Roboto-Bold  ">
+                <h1 className="text-3xl xl:text-4xl md:text-3xl sm:text-sm mb-10 mt-5 font-Roboto-Bold  ">
                   Share your thoughts!
                 </h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -134,16 +132,14 @@ const FaqForm = () => {
                     placeholder="Leave a comment..."
                   ></textarea>
                 </div>
-                <Toast ref={toast} />
-                <Button
-                  onClick={showSuccess}
+
+                <button
                   type="sbumit"
-                  severity="success"
                   className="p-ripple text-white font-Roboto-Bold text-lg sm:text-sm xl:text-lg h-14 w-full bg-darks focus:ring-4 focus:outline-none focus:ring-dark-pink font-medium rounded-lg px-5 py-2.5 text-center dark:focus:ring-blue-800"
                 >
                   Send message
                   <Ripple />
-                </Button>
+                </button>
               </form>
             </div>
           </div>

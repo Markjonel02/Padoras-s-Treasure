@@ -3,13 +3,14 @@ import { lazy, Suspense } from "react";
 import { Loaders } from "./components/Loaders";
 import { LoadPageProvider } from "./context/LazyContext";
 import { ScrollTop } from "primereact/scrolltop";
+import { PrimeReactProvider } from "primereact/api";
 
 const Navigation = lazy(() => import("./components/Navigation"));
 const Home = lazy(() => import("./routers/Home"));
 const Maincontainer = lazy(() => import("./components/Maincontainer"));
 const About = lazy(() => import("./routers/About"));
 const Faq = lazy(() => import("./components/FAQ/Faq"));
-import { PrimeReactProvider } from "primereact/api";
+
 const App = () => {
   const mainContainerClasses = [
     "main",

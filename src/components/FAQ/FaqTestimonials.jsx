@@ -22,7 +22,7 @@ const FaqTestimonials = () => {
   return (
     <>
       <h1 className="text-xl  xl:text-5xl md:text-4xl sm:text-3xl  flex justify-center font-Roboto-Black dark:text-quinary text-gray-800">
-        Customer{"'"}s Review
+        Customer{"'"}s Feedback
       </h1>
       <Swiper
         autoplay={{
@@ -201,10 +201,10 @@ const FaqTestimonials = () => {
               </svg>
               <blockquote>
                 <p className="text-xl font-Roboto-LightItalic text-quaternary dark:text-white">
-                  <span>&quot;</span>Flowbite is just awesome. It contains tons
-                  of predesigned components and pages starting from login screen
-                  to complex dashboard. Perfect choice for your next SaaS
-                  application.
+                  <span>&quot;</span>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Illum in nemo neque cum fugiat sequi iste
+                  accusantium. Officia, corrupti pariatur ut nesciunt, magnam,
+                  deserunt harum sequi repellat doloribus non quam.
                   <span>&quot;</span>
                 </p>
               </blockquote>

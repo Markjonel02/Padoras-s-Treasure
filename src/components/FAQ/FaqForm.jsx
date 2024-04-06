@@ -1,4 +1,4 @@
-import { Ripple } from "primereact/ripple";
+import Contact from "./faqContact";
 
 const FaqForm = () => {
   return (
@@ -135,7 +135,7 @@ const FaqForm = () => {
                   </svg>
 
                   <p className="add font-Roboto-Medium text-lg">
-                    Address: 123 Main St, Anytown USA
+                    Address: 123 Main St, Cainta, Rizal
                   </p>
                 </div>
               </div>
@@ -156,80 +156,7 @@ const FaqForm = () => {
               data-aos="zoom-out"
               data-aos-duration="1200"
             >
-              <form className="max-w-xl mx-auto">
-                <h1 className="text-4xl xl:text-5xl md:text-3xl sm:text-sm mb-3 font-Roboto-Black  mt-5  capitalize text-quaternary">
-                  Get in touch
-                </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block mb-2 text-md font-Roboto-Medium text-quaternary dark:text--quaternary"
-                    >
-                      Firstname
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-quaternary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-14 p-2.5 dark:bg-gray-100 dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                      placeholder="John "
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="Lastname"
-                      className="block mb-2 text-md font-Roboto-Medium text-quaternary dark:text-"
-                    >
-                      Lastname
-                    </label>
-                    <input
-                      type="text"
-                      id="Lastname"
-                      pattern="[a-zA-Z\s]*"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-quaternary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-14 p-2.5 dark:bg-gray-100 dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                      required
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-                <div className="mb-5 mt-5">
-                  <label
-                    htmlFor="Email"
-                    className="block mb-2 text-md font-Roboto-Medium text-quaternary dark:text-quaternary"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="Email"
-                    rows="7"
-                    className="block p-2.5 w-full text-md text-quaternary bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-blue-500 dark:bg-gray-100  dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="@example.com"
-                  />
-                </div>
-                <div className="mb-5 mt-5">
-                  <label
-                    htmlFor="message"
-                    className="block mb-2 text-md font-Roboto-Medium text-quaternary dark:text-quaternary"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="7"
-                    className="block p-2.5 w-full text-md text-quaternary bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-blue-500 dark:bg-gray-100  dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Leave a comment..."
-                  ></textarea>
-                </div>
-                <button
-                  type="sbumit"
-                  className="p-ripple text-white font-Roboto-Bold text-lg sm:text-sm xl:text-lg h-14 w-full bg-darks focus:ring-4 focus:outline-none focus:ring-dark-pink font-medium rounded-lg px-5 py-2.5 text-center dark:focus:ring-blue-800"
-                >
-                  Send message
-                  <Ripple />
-                </button>
-              </form>
+              <Contact />
             </div>
           </div>
         </div>

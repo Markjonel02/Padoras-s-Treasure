@@ -16,6 +16,7 @@
     "axios": "^1.6.8",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.5",
+    "formik": "^2.4.5",
     "primereact": "^10.6.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

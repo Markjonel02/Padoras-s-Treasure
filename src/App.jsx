@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Loaders } from "./components/Loaders";
 import { LoadPageProvider } from "./context/LazyContext";
@@ -10,8 +10,11 @@ const Home = lazy(() => import("./routers/Home"));
 const Maincontainer = lazy(() => import("./components/Maincontainer"));
 const About = lazy(() => import("./routers/About"));
 const Faq = lazy(() => import("./components/FAQ/Faq"));
+const PagenotFound = lazy(() => import("./components/Nopage/PagenotFound"));
 
 const App = () => {
+  const location = useLocation();
+
   const mainContainerClasses = [
     "main",
     "h-full",
@@ -27,20 +30,25 @@ const App = () => {
     "p-ripple",
   ].join("");
 
+  const isPageFound = location.pathname !== "*";
+
   return (
     <>
       <PrimeReactProvider value={{ ripple: true }}>
         <LoadPageProvider>
           <Suspense fallback={<Loaders />}>
-            <div className="nav">
-              <Navigation />
-            </div>
+            {isPageFound && (
+              <div className="nav">
+                <Navigation />
+              </div>
+            )}
 
             <Maincontainer className={mainContainerClasses}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<Faq />} />
+                <Route path="*" element={<PagenotFound />} />
               </Routes>
 
               <ScrollTop

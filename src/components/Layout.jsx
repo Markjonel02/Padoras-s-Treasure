@@ -15,7 +15,6 @@ const Layout = () => {
   const navLinks = [
     { to: "/", text: "Home" },
     { to: "/about", text: "About" },
-
     { to: "/faq", text: "Faq" },
   ];
 

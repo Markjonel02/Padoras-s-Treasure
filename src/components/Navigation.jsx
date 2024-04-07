@@ -36,7 +36,7 @@ const Navigation = () => {
   }, []); // Empty dependency array ensures the effect runs only once
 
   const show = () => {
-    setisShow(!isShow);
+    setisShow(!isShow);page
   };
 
   const toggleNav = () => {

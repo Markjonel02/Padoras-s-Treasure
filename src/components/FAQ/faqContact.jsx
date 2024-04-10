@@ -20,10 +20,14 @@ const ContactForm = () => {
             const errors = {};
             if (!values.firstname) {
               errors.firstname = "Firstname is Required";
+            } else if (!/^[a-zA-Z]+$/.test(values.firstname)) {
+              errors.firstname = "Firstname must contain only letters";
             }
-            
+
             if (!values.lastname) {
               errors.lastname = "Lastname is Required";
+            } else if (!/^[a-zA-Z]+$/.test(values.lastname)) {
+              errors.lastname = "Lastname must contain only letters";
             }
             if (!values.email) {
               errors.email = "Email is Required";

@@ -62,7 +62,7 @@ const Productsdrop = () => {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Dashboard
+                Lip Serum
               </a>
             </li>
             <li>
@@ -70,7 +70,7 @@ const Productsdrop = () => {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Settings
+                Face Serum
               </a>
             </li>
             <li>
@@ -78,7 +78,7 @@ const Productsdrop = () => {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Earnings
+                Essential oil
               </a>
             </li>
             <li>
@@ -86,7 +86,7 @@ const Productsdrop = () => {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Sign out
+                Hair Serum
               </a>
             </li>
           </ul>

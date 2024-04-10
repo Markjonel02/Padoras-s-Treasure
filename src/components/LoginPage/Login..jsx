@@ -1,9 +1,11 @@
-import React from "react";
-
 const Login = () => {
   return (
     <>
-      <div className="login"></div>
+      <div className="login">
+        <div className="form">
+          
+        </div>
+      </div>
     </>
   );
 };

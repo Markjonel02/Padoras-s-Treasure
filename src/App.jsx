@@ -37,11 +37,7 @@ const App = () => {
       <PrimeReactProvider value={{ ripple: true }}>
         <LoadPageProvider>
           <Suspense fallback={<Loaders />}>
-            {isPageFound && (
-              <div className="nav">
-                <Navigation />
-              </div>
-            )}
+            {isPageFound ? <Navigation /> : <PagenotFound />}
 
             <Maincontainer className={mainContainerClasses}>
               <Routes>

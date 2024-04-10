@@ -26,7 +26,7 @@ const FaqForm = () => {
                 <dt className="mb-2 text-3xl font-extrabold">100k+</dt>
                 <dd className="text-gray-500 dark:text-gray-400">Orders</dd>
               </div>
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-lastname)) {fy-center">
                 <dt className="mb-2 text-3xl font-extrabold">1000+</dt>
                 <dd className="text-gray-500 dark:text-gray-400">
                   New Customers
@@ -62,10 +62,10 @@ const FaqForm = () => {
           data-aos-duration="1000"
         >
           <div className=" md:w-1/2 bg-gray-100   dark:bg-quinary  rounded-lg text-quaternary mb-10">
-            <h1 className="text-3xl xl:text-4xl md:text-3xl sm:text-sm mb-3 font-Roboto-Black px-8 mt-5  capitalize text-quaternary">
+            {/* <h1 className="text-3xl xl:text-4xl md:text-3xl sm:text-sm mb-3 font-Roboto-Black px-8 mt-5  capitalize text-quaternary">
               contact us
-            </h1>
-            <div className=" px-10 pb-4  rounded-lg text-quaternary">
+            </h1> */}
+            <div className=" px-10 pb-4  rounded-lg text-quaternary mt-20">
               <div className="desc flex flex-wrap justify-around lg:justify-around">
                 <div className="Phone w-full sm:w-auto flex-1 pr-2 mb-5 sm:mb-0 md:mb-0">
                   <span className="font-Roboto-Medium text-lg ">
@@ -139,7 +139,7 @@ const FaqForm = () => {
                   </p>
                 </div>
               </div>
-              <div className="image-container flex justify-center items-center">
+              <div className="image-container flex justify-center items-center py-11">
                 <iframe
                   className="w-full h-[370px] rounded-lg"
                   src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=San%20Andres,Cainta%20Rizal+(Pandora's%20Treasure)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"

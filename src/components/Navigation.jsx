@@ -3,12 +3,15 @@ import Layout from "./Layout";
 import { NavLink } from "react-router-dom";
 import Aos from "aos";
 import { useScrollContext } from "../context/Context";
-import ProfileDd from "../routers/ProfileDd";
+import { Dialog } from "primereact/dialog";
+import { Button } from "primereact/button";
+import Login from "./LoginPage/Login.";
+/* import ProfileDd from "../routers/ProfileDd"; */
 const Navigation = () => {
   const { isScroll } = useScrollContext();
   const [isVisible, setIsVisible] = useState(true);
   const [NavisOpen, setNavisOpen] = useState(false);
-  const [isShow, setisShow] = useState(false);
+  const [isShowed, setisShowed] = useState(false);
   useEffect(() => {
     Aos.init();
 
@@ -35,10 +38,17 @@ const Navigation = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty dependency array ensures the effect runs only once
 
-  const show = () => {
-    setisShow(!isShow);
-    page;
-  };
+  useEffect(() => {
+    if (isShowed) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isShowed]);
 
   const toggleNav = () => {
     setNavisOpen(!NavisOpen);
@@ -160,12 +170,13 @@ const Navigation = () => {
             </button>
 
             {/* Profile dropdown */}
+
             <div className="relative ml-3">
               <div>
-                <button
+                <Button
                   type="button"
-                  onClick={show}
-                  className={`relative flex rounded-full p-1 text-sm   dark:text-white text-gray-800 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
+                  onClick={() => setisShowed(true)}
+                  className={`relative flex rounded-full p-1 text-sm dark:text-white text-gray-800 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
                     isScroll && "dark:text-white"
                   }`}
                   id="user-menu-button"
@@ -188,20 +199,22 @@ const Navigation = () => {
                       d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                     />
                   </svg>
-                </button>
+                </Button>
               </div>
-              {/* Dropdown menu, show/hide based on menu state */}
-              <div
-                className={`${
-                  isShow ? "absolute" : "hidden"
-                } dark:bg-darks dark:text-quinary text-lg dropdown  right-0 z-10 mt-8 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu-button"
-                tabIndex="-1"
-              >
-                <ProfileDd />
-              </div>
+              {/*   {isShow && (
+                <div className=" background fixed inset-0 bg-black opacity-50 z-10"></div>
+              )} */}
+              <Dialog
+                modal
+                visible={isShowed}
+                onHide={() => setisShowed(false)}
+                className="rounded-lg shadow-lg "
+                content={() => (
+                  <>
+                    <Login className="relative" />
+                  </>
+                )}
+              />
             </div>
           </div>
         </div>

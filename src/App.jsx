@@ -30,14 +30,12 @@ const App = () => {
     "p-ripple",
   ].join("");
 
-  const isPageFound = location.pathname !== "*";
-
   return (
     <>
       <PrimeReactProvider value={{ ripple: true }}>
         <LoadPageProvider>
           <Suspense fallback={<Loaders />}>
-            {isPageFound ? <Navigation /> : <PagenotFound />}
+            <Navigation />
 
             <Maincontainer className={mainContainerClasses}>
               <Routes>

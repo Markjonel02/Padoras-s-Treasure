@@ -6,7 +6,8 @@ import { useScrollContext } from "../context/Context";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 import Login from "./LoginPage/Login.";
-/* import ProfileDd from "../routers/ProfileDd"; */
+import CreateAcc from "./LoginPage/CreateAcc";
+
 const Navigation = () => {
   const { isScroll } = useScrollContext();
   const [isVisible, setIsVisible] = useState(true);
@@ -201,17 +202,17 @@ const Navigation = () => {
                   </svg>
                 </Button>
               </div>
-              {/*   {isShow && (
-                <div className=" background fixed inset-0 bg-black opacity-50 z-10"></div>
-              )} */}
+
               <Dialog
                 modal
                 visible={isShowed}
                 onHide={() => setisShowed(false)}
-                className="rounded-lg shadow-lg "
+                className="rounded-lg shadow-lg w-[500px] flex m-5 ease-in-out"
                 content={() => (
                   <>
-                    <Login className="relative" />
+                    {/* <Login className="relative" /> */}
+
+                    <CreateAcc />
                   </>
                 )}
               />
@@ -226,7 +227,6 @@ const Navigation = () => {
         id="mobile-menu"
       >
         <div className="space-y-1 px-2 pb-3 pt-2">
-          {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
           <NavLink
             to="/"
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"

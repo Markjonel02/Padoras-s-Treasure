@@ -4,7 +4,6 @@ import { Ripple } from "primereact/ripple";
 const ContactForm = () => {
   return (
     <>
-      {" "}
       <div className="max-w-xl mx-auto">
         <h1 className="text-4xl xl:text-5xl md:text-3xl sm:text-sm mb-3 font-Roboto-Black mt-5 capitalize text-quaternary">
           Get in touch
@@ -84,7 +83,7 @@ const ContactForm = () => {
                   <Field
                     type="text"
                     name="lastname"
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-quaternary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-14 p-2.5 dark:bg-gray-100 dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    className="shadow-sm bg-gray-50 border border-gray-300 text-quaternary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5 dark:bg-gray-100 dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                   />
                   <ErrorMessage
                     name="lastname"
@@ -136,7 +135,7 @@ const ContactForm = () => {
                 className="p-ripple text-white font-Roboto-Bold text-lg sm:text-sm xl:text-lg h-14 w-full bg-darks focus:ring-4 focus:outline-none focus:ring-dark-pink font-medium rounded-lg px-5 py-2.5 text-center dark:focus:ring-blue-800"
               >
                 {isSubmitting ? "Sending..." : "Send message"}
-                <Ripple />
+                <Ripple className="animate-pulse" />
               </button>
             </Form>
           )}

@@ -3,9 +3,8 @@ import * as Yup from "yup";
 import { BiLogoFacebookCircle } from "react-icons/bi";
 import { FaGooglePlus } from "react-icons/fa6";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { FaCircleUser } from "react-icons/fa6";
 import { Ripple } from "primereact/ripple";
-const Login = () => {
+const CreateAcc = () => {
   return (
     <>
       <div className="fixed inset-0 z-0 bg-black opacity-50"></div>
@@ -27,9 +26,7 @@ const Login = () => {
           </svg>
         </button>
         <div className="max-w-md w-full space-y-8">
-          <div className="flex flex-col items-center">
-            <FaCircleUser className="w-20 h-20 text-darks flex justify-center" />
-          </div>
+          <div className="flex flex-col items-center"></div>
           <Formik
             initialValues={{ username: "", password: "" }}
             validationSchema={Yup.object({
@@ -56,7 +53,17 @@ const Login = () => {
                   component="div"
                   className="text-red-500 text-sm"
                 />
-
+                <Field
+                  type="text"
+                  name="username"
+                  className=" appearance-none rounded-none relative block w-full px-2 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Username"
+                />
+                <ErrorMessage
+                  name="username"
+                  component="div"
+                  className="text-red-500 text-sm"
+                />
                 <Field
                   type="password"
                   name="password"
@@ -83,7 +90,7 @@ const Login = () => {
                       href="#"
                       className="text-sm text-quaternary hover:text-indigo-900"
                     >
-                      Create an account
+                      Already have an account?
                     </a>
                   </div>
                 </div>
@@ -124,5 +131,4 @@ const Login = () => {
     </>
   );
 };
-
-export default Login;
+export default CreateAcc;

@@ -1,14 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom";
+import App from "./App.jsx";
+import "./index.css";
+import Aos from "aos";
+import "swiper/css";
+import "aos/dist/aos.css";
 
+/* import { PrimeReactProvider } from "primereact/api"; */
+import { LoadPageProvider } from "./context/LazyContext.jsx";
+import { ScrollProvider } from "./context/Context";
+import { BrowserRouter } from "react-router-dom";
+const AOS = () => {
+  useEffect(() => {
+    Aos.init();
+    return () => {
+      Aos.refresh();
+    };
+  }, []);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
- <BrowserRouter>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // Return null as placeholder
+  return null;
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <React.StrictMode>
+      <LoadPageProvider>
+        <ScrollProvider>
+          <AOS />
+          <App />
+        </ScrollProvider>
+      </LoadPageProvider>
+    </React.StrictMode>
   </BrowserRouter>
-)
+);

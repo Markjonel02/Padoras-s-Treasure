@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "node Server/server.mjs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -14,6 +15,7 @@
     "@react-hook/media-query": "^1.1.1",
     "aos": "^2.3.4",
     "axios": "^1.6.8",
+    "express": "^4.19.2",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.5",
     "formik": "^2.4.5",

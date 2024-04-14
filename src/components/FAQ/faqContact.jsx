@@ -65,7 +65,7 @@ const ContactForm = () => {
                   <Field
                     type="text"
                     name="firstname"
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-quaternary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-14 p-2.5 dark:bg-gray-100 dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    className="shadow-sm bg-gray-50 border border-gray-300 text-quaternary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5 dark:bg-gray-100 dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                   />
                   <ErrorMessage
                     name="firstname"
@@ -120,7 +120,7 @@ const ContactForm = () => {
                 <Field
                   as="textarea"
                   name="message"
-                  rows="7"
+                  rows="8"
                   className="block p-2.5 w-full text-md text-quaternary bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-blue-500 dark:bg-gray-100 dark:placeholder-gray-400 dark:text-quaternary dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 />
                 <ErrorMessage

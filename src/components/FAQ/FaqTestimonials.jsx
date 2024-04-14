@@ -50,10 +50,11 @@ const FaqTestimonials = () => {
               </svg>
               <blockquote>
                 <p className="text-xl font-Roboto-LightItalic text-quaternary dark:text-white">
-                  <span>&quot;</span>Flowbite is just awesome. It contains tons
-                  of predesigned components and pages starting from login screen
-                  to complex dashboard. Perfect choice for your next SaaS
-                  application.
+                  <span>&quot;</span>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Autem repellendus sit quam dicta nam eius
+                  dolor praesentium dolore animi! Inventore exercitationem
+                  facilis, cupiditate placeat aspernatur natus at eius odio
+                  consequatur.
                   <span>&quot;</span>
                 </p>
               </blockquote>
@@ -88,10 +89,11 @@ const FaqTestimonials = () => {
               </svg>
               <blockquote>
                 <p className="text-xl font-Roboto-LightItalic text-quaternary dark:text-white">
-                  <span>&quot;</span>Flowbite is just awesome. It contains tons
-                  of predesigned components and pages starting from login screen
-                  to complex dashboard. Perfect choice for your next SaaS
-                  application.
+                  <span>&quot;</span>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Illum dolores libero doloribus, iure illo
+                  numquam. Mollitia, cupiditate explicabo dolorem laboriosam
+                  aspernatur iure eos, magnam suscipit accusantium ullam,
+                  officiis eaque incidunt?
                   <span>&quot;</span>
                 </p>
               </blockquote>
@@ -126,10 +128,10 @@ const FaqTestimonials = () => {
               </svg>
               <blockquote>
                 <p className="text-xl font-Roboto-LightItalic text-quaternary dark:text-white">
-                  <span>&quot;</span>Flowbite is just awesome. It contains tons
-                  of predesigned components and pages starting from login screen
-                  to complex dashboard. Perfect choice for your next SaaS
-                  application.
+                  <span>&quot;</span>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Aperiam ipsum saepe optio eveniet repellat,
+                  voluptatibus, veniam facere, enim error nobis ipsa praesentium
+                  temporibus totam atque! Quam impedit blanditiis totam officia?
                   <span>&quot;</span>
                 </p>
               </blockquote>
@@ -164,10 +166,10 @@ const FaqTestimonials = () => {
               <Ripple />
               <blockquote>
                 <p className="text-xl font-Roboto-LightItalic text-quaternary dark:text-white">
-                  <span>&quot;</span>Flowbite is just awesome. It contains tons
-                  of predesigned components and pages starting from login screen
-                  to complex dashboard. Perfect choice for your next SaaS
-                  application.
+                  <span>&quot;</span>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Architecto voluptatum quae laborum dolores
+                  doloremque odio ab veniam incidunt recusandae quis id
+                  perferendis, omnis odit culpa quidem. Eos illum soluta totam.
                   <span>&quot;</span>
                 </p>
               </blockquote>
@@ -202,9 +204,10 @@ const FaqTestimonials = () => {
               <blockquote>
                 <p className="text-xl font-Roboto-LightItalic text-quaternary dark:text-white">
                   <span>&quot;</span>Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Illum in nemo neque cum fugiat sequi iste
-                  accusantium. Officia, corrupti pariatur ut nesciunt, magnam,
-                  deserunt harum sequi repellat doloribus non quam.
+                  adipisicing elit. Deleniti magni ullam tenetur velit
+                  reiciendis placeat. Repellat labore commodi facilis,
+                  consectetur culpa, mollitia, cum facere vitae ea nulla illum
+                  est minima!
                   <span>&quot;</span>
                 </p>
               </blockquote>

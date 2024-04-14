@@ -13,8 +13,6 @@ const Faq = lazy(() => import("./components/FAQ/Faq"));
 const PagenotFound = lazy(() => import("./components/Nopage/PagenotFound"));
 
 const App = () => {
-  const location = useLocation();
-
   const mainContainerClasses = [
     "main",
     "h-full",

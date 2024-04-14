@@ -53,7 +53,7 @@ const HomeImageCon = () => {
               {/* Content */}
               <div className="absolute inset-0 flex items-center justify-center flex-col z-20 text-center shadow-sm">
                 <h1
-                  className="text-5xl xl:text-6xl md:text-6xl sm:text-5xl font-extrabold text-white"
+                  className="text-5xl xl:text-6xl md:text-6xl sm:text-5xl font-extrabold text-white mb-4"
                   data-aos="zoom-out"
                 >
                   Pandora<span>&apos;</span>s Treasure
@@ -73,12 +73,15 @@ const HomeImageCon = () => {
             <div className="home-banner mb-5 flex justify-center">
               <Homebanner />
             </div>
-            <h1 className="Top Products text-5xl"></h1>
+
             <div
               className="prod-overview  mt-20"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
+              <h1 className="text-xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl mx-32 font-Roboto-Bold text-quaternary ">
+                Top Skincare Products
+              </h1>
               <ProductsOverview />
             </div>
             <div className="foot  overflow-x-hidden ">

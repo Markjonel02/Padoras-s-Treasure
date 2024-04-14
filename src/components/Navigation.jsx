@@ -210,9 +210,7 @@ const Navigation = () => {
                 className="rounded-lg shadow-lg w-[500px] flex m-5 ease-in-out"
                 content={() => (
                   <>
-                    {/* <Login className="relative" /> */}
-
-                    <CreateAcc />
+                    <Login />
                   </>
                 )}
               />

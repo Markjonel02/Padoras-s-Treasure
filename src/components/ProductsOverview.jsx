@@ -10,18 +10,21 @@ const ProductsOverview = () => {
   const [Isclick, setIsclick] = useState(false);
 
   const handleClick = () => {
-    setIsclick(true);
+    setTimeout(() => {
+      setIsclick(true);
+    }, 500);
   };
+
   const breakpoints = {
     // Define breakpoints where slidesPerView changes
     320: {
       slidesPerView: 1,
     },
     480: {
-      slidesPerView: 1.8,
+      slidesPerView: 1.2,
     },
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1.4,
     },
     768: {
       slidesPerView: 2.4,
@@ -44,7 +47,7 @@ const ProductsOverview = () => {
   };
 
   return (
-    <div className="relative w-full h">
+    <div className="relative w-full h-full">
       <Swiper
         className={`container mx-auto antialiased `}
         spaceBetween={10}
@@ -91,14 +94,18 @@ const ProductsOverview = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="relative secondTopProducts blue">
+      <div
+        className={`relative secondTopProducts  ${
+          Isclick
+            ? "h-full overflow-visible ease"
+            : "overflow-hidden h-[500px] blur-sm  pointer-events-none"
+        } `}
+      >
         <div
-          className={` absolute blur-sm inset-0 z-30 bg-black opacity-20 flex justify-center ${
+          className={` absolute blur-sm inset-0 z-50 bg-black opacity-20  ${
             Isclick && "hidden"
           }`}
-        >
-          <h1></h1>
-        </div>
+        ></div>
         <Swiper
           className={`container mx-auto antialiased `}
           spaceBetween={10}
@@ -146,7 +153,55 @@ const ProductsOverview = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>{" "}
+
+        <Swiper
+          className={`container mx-auto antialiased `}
+          spaceBetween={10}
+          breakpoints={breakpoints}
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          {" "}
+          {[...Array(10).keys()].map((index) => (
+            <SwiperSlide key={index}>
+              <div className="p-5">
+                <div className="max-w-sm mx-auto overflow-hidden relative shadow-lg rounded-lg hover:scale-110  ease-in cursor-grab dark:hover:bg-quinary hover:bg-dark-pink mb-10">
+                  <img
+                    className="absolute left-0 top-0 w-16 h-auto sm:w-16 lg:w-24"
+                    src={logo}
+                    alt="logo"
+                  />
+                  <div className="relative p-ripple">
+                    <img
+                      className="w-full h-60 object-cover hover:animate-bounce sm:"
+                      height
+                      src={ung}
+                      alt="ung"
+                    />
+
+                    <Ripple />
+                    <div className="absolute inset-0 bg-primary opacity-20"></div>
+                    <div className="absolute inset-0 flex justify-center items-center"></div>
+                  </div>
+                  <div className="bg-white p-5 dark:bg-darks  ">
+                    <h5 className="text-red text-xl font-lighter tracking-wide uppercase dark:text-white  mt-2 leading-loose">
+                      shea butter
+                    </h5>
+                    <p className="text-gray-700 text-base dark:text-gray-300 0000 mb-2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deleniti natus et quas dicta? Blanditiis, provident.
+                    </p>
+
+                    <p className="price text-quaternary font-bold dark:text-white text-xl">
+                      Php 200.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <div className="relative btn flex  justify-center items-center mb-10 bottom-0 top-0 right-0 mt-10">
         <button
           onClick={handleClick}

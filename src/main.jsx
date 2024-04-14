@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App.jsx";
 import "./index.css";
 import Aos from "aos";
-import "swiper/css";
+
 import "aos/dist/aos.css";
 
 /* import { PrimeReactProvider } from "primereact/api"; */

@@ -5,7 +5,7 @@ import HomeSection from "./HomeSection";
 import { Loaders } from "./Loaders";
 import ProductsOverview from "./ProductsOverview";
 import Homebanner from "./Homebanner";
-import { Ripple } from "primereact/ripple";
+
 const HomeImageCon = () => {
   const [imageLoad, setImageLoad] = useState(false);
 
@@ -73,18 +73,13 @@ const HomeImageCon = () => {
             <div className="home-banner mb-5 flex justify-center">
               <Homebanner />
             </div>
+            <h1 className="Top Products text-5xl"></h1>
             <div
               className="prod-overview  mt-20"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
               <ProductsOverview />
-              <div className="btn flex  justify-center items-center mb-10">
-                <button className="p-ripple px-4 py-2 rounded bg-primary text-gray-700 text-lg  font-Roboto font-Roboto-Medium  hover:scale-105  ease-in ">
-                  See more
-                  <Ripple />
-                </button>
-              </div>
             </div>
             <div className="foot  overflow-x-hidden ">
               <Footer />

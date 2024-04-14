@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import { Ripple } from "primereact/ripple";
+import "swiper/css";
 const FaqTestimonials = () => {
   const Breakpoints = {
     320: {
@@ -30,8 +31,7 @@ const FaqTestimonials = () => {
           disableOnInteraction: false,
         }}
         breakpoints={Breakpoints}
-        modules={[Pagination, Autoplay]}
-        pagination={Pagination}
+        modules={[Autoplay]}
         navigation
         grabCursor="true"
         className="flex justify-center items-center mt-10 mb-20  h-full p-5 "

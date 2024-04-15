@@ -3,6 +3,7 @@ import { useScrollContext } from "../context/Context";
 import { useState } from "react";
 import Productsdrop from "../routers/Productsdrop";
 import { Ripple } from "primereact/ripple";
+
 const Layout = () => {
   const { isScroll } = useScrollContext();
   const location = useLocation();
@@ -10,15 +11,18 @@ const Layout = () => {
 
   const handleNavLinkClick = (to) => {
     setActiveLink(to);
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
   };
 
   const navLinks = [
     { to: "/", text: "Home" },
     { to: "/about", text: "About" },
     { to: "/faq", text: "Faq" },
+    { to: "/create-account", text: "Create Account" },
   ];
 
-  const linkStyle = ` p-ripple text-gray-800 dark:text-white ${
+  const linkStyle = `p-ripple text-gray-800 dark:text-white ${
     isScroll && "dark:text-quinary"
   } hover:bg-gray-700  sm:inline-block sm:hover:text-gray-300 rounded-md px-3 py-2.5 font-bold text-lg`;
 

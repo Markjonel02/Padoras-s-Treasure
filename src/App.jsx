@@ -11,7 +11,7 @@ const Maincontainer = lazy(() => import("./components/Maincontainer"));
 const About = lazy(() => import("./routers/About"));
 const Faq = lazy(() => import("./components/FAQ/Faq"));
 const PagenotFound = lazy(() => import("./components/Nopage/PagenotFound"));
-
+const CreateAccount = lazy(() => import("./components/LoginPage/CreateAcc"));
 const App = () => {
   const mainContainerClasses = [
     "main",
@@ -28,21 +28,26 @@ const App = () => {
     "p-ripple",
   ].join("");
 
+  const location = useLocation();
+  const hideNav = ["create-account", "pagenotfound"].includes(
+    location.pathname.split("/")[1]
+  );
+
   return (
     <>
       <PrimeReactProvider value={{ ripple: true }}>
         <LoadPageProvider>
           <Suspense fallback={<Loaders />}>
-            <Navigation />
-
+            {!hideNav && <Navigation />}
             <Maincontainer className={mainContainerClasses}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<Faq />} />
+                <Route path="/create-account" element={<CreateAccount />} />
+                <Route path="/pagenotfound" element={<PagenotFound />} />
                 <Route path="*" element={<PagenotFound />} />
               </Routes>
-
               <ScrollTop
                 threshold={100}
                 className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"

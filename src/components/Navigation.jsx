@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Layout from "./Layout";
-import { NavLink } from "react-router-dom";
+
 import Aos from "aos";
 import { useScrollContext } from "../context/Context";
 import { Dialog } from "primereact/dialog";
@@ -79,6 +79,7 @@ const Navigation = () => {
               <span className="absolute -inset-0.5"></span>
               <span className="sr-only">Open main menu</span>
               {/* Icon when menu is closed */}
+
               <svg
                 className={`${NavisOpen ? "hidden" : "block"} h-6 w-6`}
                 fill="none"
@@ -225,26 +226,26 @@ const Navigation = () => {
         id="mobile-menu"
       >
         <div className="space-y-1 px-2 pb-3 pt-2">
-          <NavLink
+          <a
             to="/"
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
             Home
-          </NavLink>
-          <NavLink
+          </a>
+          <a
             to="/about"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             About
-          </NavLink>
+          </a>
 
-          <NavLink
+          <a
             to="/contact"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Contact
-          </NavLink>
+          </a>
         </div>
       </div>
     </nav>

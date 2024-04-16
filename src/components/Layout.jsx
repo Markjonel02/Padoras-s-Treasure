@@ -19,7 +19,6 @@ const Layout = () => {
     { to: "/", text: "Home" },
     { to: "/about", text: "About" },
     { to: "/faq", text: "Faq" },
-    { to: "/create-account", text: "Create Account" },
   ];
 
   const linkStyle = `p-ripple text-gray-800 dark:text-white ${

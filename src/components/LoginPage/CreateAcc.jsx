@@ -1,5 +1,6 @@
 import { Ripple } from "primereact/ripple";
 import Personal from "./CreateAccount/Personal";
+
 const CreateAcc = () => {
   return (
     <>
@@ -46,18 +47,18 @@ const CreateAcc = () => {
           </span>
 
           <span className="text-md text-gray-600 mt-2 ml-[-30px] font-Roboto-Medium">
-            Address
+            Payment
           </span>
 
           <span className="text-md text-gray-600 mt-2 font-Roboto-Medium">
-            Verify
+            Veri
           </span>
 
           <span className="text-md text-gray-600 mt-2 font-Roboto-Medium">
-            Step 4
+            confirmation
           </span>
         </div>
-        <div className="flex items-center justify-between mb-20">
+        <div className="flex items-center justify-between  mb-20 sm:20">
           <div className="flex items-center">
             <div className="w-8 h-8 flex items-center justify-center rounded-full bg-dark-pink text-white">
               <div className="rounded-full p-2 h-3 w-3 bg-quinary"></div>

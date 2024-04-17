@@ -44,7 +44,7 @@ const Login = () => {
             }}
           >
             {({ isSubmitting }) => (
-              <Form className="relative z-10  space-y-6">
+              <Form className="relative z-10  space-y-4">
                 <Field
                   type="text"
                   name="username"

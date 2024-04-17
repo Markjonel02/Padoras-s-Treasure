@@ -176,6 +176,13 @@ const Navigation = () => {
             <div className="relative ml-3">
               <div>
                 <Button
+                  className="px-5 py-2 rounded-3xl font-Roboto-Medium border border-dark-pink hover:scale-105 ease hover:bg-dark-pink ring-slate-700"
+                  onClick={() => setisShowed(true)}
+                >
+                  <a href="/login">Login</a>
+                </Button>
+                {/* 
+                <Button
                   type="button"
                   onClick={() => setisShowed(true)}
                   className={`relative flex rounded-full p-1 text-sm dark:text-white text-gray-800 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
@@ -201,7 +208,7 @@ const Navigation = () => {
                       d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                     />
                   </svg>
-                </Button>
+                </Button> */}
               </div>
 
               <Dialog

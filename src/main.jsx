@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 import { LoadPageProvider } from "./context/LazyContext.jsx";
 import { ScrollProvider } from "./context/Context";
 import { BrowserRouter } from "react-router-dom";
-const AOS = () => {
+export const AOS = () => {
   useEffect(() => {
     Aos.init();
     return () => {

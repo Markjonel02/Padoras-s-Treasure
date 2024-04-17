@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Design from "../../../assets/imgs/svgs/aboutsvgs/design.svg";
 import { Ripple } from "primereact/ripple";
 const PersonalInfoForm = () => {
-  const [isSubmitting, setSubmitting] = useState(false);
+  const [issetSubmitting, setSubmitting] = useState(false);
 
   return (
     <>
@@ -71,7 +71,7 @@ const PersonalInfoForm = () => {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
-            }, 400);
+            }, 500);
           }}
         >
           {({ isSubmitting }) => (
@@ -291,7 +291,7 @@ const PersonalInfoForm = () => {
                   disabled={isSubmitting}
                   className=" p-ripple w-full bg-darks text-white py-3 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700"
                 >
-                  Proceed
+                  {issetSubmitting ? "Submitting..." : "Proceed"}
                   <Ripple />
                 </button>
               </Form>

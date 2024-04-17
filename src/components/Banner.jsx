@@ -1,5 +1,5 @@
 import Particles from "particles.js";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 const Banner = () => {
   useEffect(() => {
     Particles.init({

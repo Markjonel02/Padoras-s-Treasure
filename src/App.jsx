@@ -12,6 +12,7 @@ const About = lazy(() => import("./routers/About"));
 const Faq = lazy(() => import("./components/FAQ/Faq"));
 const PagenotFound = lazy(() => import("./components/Nopage/PagenotFound"));
 const CreateAccount = lazy(() => import("./components/LoginPage/CreateAcc"));
+
 const App = () => {
   const mainContainerClasses = [
     "main",
@@ -29,7 +30,7 @@ const App = () => {
   ].join("");
 
   const location = useLocation();
-  const hideNav = ["create-account", "pagenotfound"].includes(
+  const hideNav = ["create-account", "*"].includes(
     location.pathname.split("/")[1]
   );
 

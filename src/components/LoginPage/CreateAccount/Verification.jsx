@@ -1,13 +1,13 @@
-import PropTypes from "prop-types"; // Import PropTypes
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Ripple } from "primereact/ripple";
+const VerificationForm = () => {
+  const onSubmit = (values, { setSubmitting }) => {
+    // Handle form submission
+  };
 
-const VerificationForm = ({ onSubmit, onResend }) => {
   const handleResend = () => {
-    // Handle resend logic here
-    if (onResend) {
-      onResend();
-    }
+    // Handle resend logic
   };
 
   return (
@@ -17,7 +17,23 @@ const VerificationForm = ({ onSubmit, onResend }) => {
           verificationCode: "",
         }}
         validationSchema={Yup.object({
-          verificationCode: Yup.string().required("Required"),
+          verificationCode: Yup.string()
+            .test(
+              "is-numbers-only",
+              "Verification code must contain only numbers",
+              (value) => /^[0-9]+$/.test(value)
+            )
+            .test(
+              "is-six-digits",
+              "Verification code must be exactly 6 digits",
+              (value) => value.length === 6
+            )
+            .test(
+              "no-letters",
+              "Verification code must not contain letters",
+              (value) => !/[a-zA-Z]/.test(value)
+            )
+            .required("Verification code Required"),
         })}
         onSubmit={onSubmit}
       >
@@ -28,7 +44,7 @@ const VerificationForm = ({ onSubmit, onResend }) => {
                 htmlFor="verificationCode"
                 className="block text-sm font-Roboto-Medium text-quaternary"
               >
-                Email Verification Code <span className="text-red-500"> *</span>
+                {/*   Email Verification Code <span className="text-red-500"> *</span> */}
               </label>
               <Field
                 name="verificationCode"
@@ -45,16 +61,18 @@ const VerificationForm = ({ onSubmit, onResend }) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-darks text-white py-3 px-4 rounded-md hover:bg-primary focus:outline-none focus:bg-primary mr-2"
+                className=" p-ripple w-full bg-darks text-white py-3 px-4 rounded-md hover:bg-primary focus:outline-none focus:bg-primary mr-2"
               >
                 {isSubmitting ? "Submitting..." : "Verify"}
+                <Ripple />
               </button>
               <button
-                type="button"
+                type="submit"
                 onClick={handleResend}
-                className="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 ml-2"
+                className=" p-ripple w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 ml-2"
               >
                 Resend
+                <Ripple />
               </button>
             </div>
           </Form>
@@ -62,12 +80,6 @@ const VerificationForm = ({ onSubmit, onResend }) => {
       </Formik>
     </div>
   );
-};
-
-// Prop validation
-VerificationForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired, // onSubmit must be a function and is required
-  onResend: PropTypes.func, // onResend is a function and is optional
 };
 
 export default VerificationForm;

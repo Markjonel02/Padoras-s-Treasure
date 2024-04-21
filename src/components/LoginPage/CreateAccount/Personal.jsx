@@ -338,7 +338,21 @@ const PersonalInfoForm = () => {
             </div>
           </Formik>
         ) : (
-          <VerificationForm onSubmit={handleVerificationSubmit} />
+          <>
+            <div className="flex justify-center items-center flex-col w-[600px]">
+              <div className="div flex flex-col text-center mb-10">
+                <h1 className="mt-0 text-2xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl font-Roboto-Bold">
+                  Authenticate Your Account
+                </h1>
+                <span className="block text-lg sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                  Please enter the 6 code sent to your email.
+                </span>
+              </div>
+              <div className="flex justify-center items-center w-full">
+                <VerificationForm onSubmit={handleVerificationSubmit} />
+              </div>
+            </div>
+          </>
         )}
       </div>
     </>

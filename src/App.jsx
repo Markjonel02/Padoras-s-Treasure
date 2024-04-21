@@ -12,7 +12,6 @@ const About = lazy(() => import("./routers/About"));
 const Faq = lazy(() => import("./components/FAQ/Faq"));
 const PagenotFound = lazy(() => import("./components/Nopage/PagenotFound"));
 const CreateAccount = lazy(() => import("./components/LoginPage/CreateAcc"));
-
 const App = () => {
   const mainContainerClasses = [
     "main",
@@ -24,23 +23,25 @@ const App = () => {
     "antialiased",
     "dark:bg-darks",
     "scrollbar-thin",
-    " scrollbar-thumb-gray-400",
+    "scrollbar-thumb-gray-400",
     "scrollbar-track-gray-100",
     "p-ripple",
   ].join("");
 
-  const location = useLocation();
-  const hideNav = ["create-account", "*"].includes(
-    location.pathname.split("/")[1]
+  const hiddenRoutes = ["/create-account"];
+
+  // Check if the current route is in the hiddenRoutes array
+  const shouldHideNav = hiddenRoutes.some((route) =>
+    location.pathname.startsWith(route)
   );
 
   return (
     <>
-      <PrimeReactProvider value={{ ripple: true }}>
-        <LoadPageProvider>
-          <Suspense fallback={<Loaders />}>
-            {!hideNav && <Navigation />}
+      <Suspense fallback={<Loaders />}>
+        <PrimeReactProvider value={{ ripple: true }}>
+          <LoadPageProvider>
             <Maincontainer className={mainContainerClasses}>
+              {!shouldHideNav && <Navigation />}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -54,9 +55,9 @@ const App = () => {
                 className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
               />
             </Maincontainer>
-          </Suspense>
-        </LoadPageProvider>
-      </PrimeReactProvider>
+          </LoadPageProvider>
+        </PrimeReactProvider>
+      </Suspense>
     </>
   );
 };

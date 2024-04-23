@@ -5,7 +5,7 @@ const PandoraCosmeticsSect = () => {
   return (
     <>
       <section className="pandora-cosmetics-section bg-white py-8 md:py-12  text-quaternary dark:bg-darks dark:text-quinary">
-        <div className="container mx-auto sm:flex-col  md:flex-row lg:flex-col p-4">
+        <div className="container mx-auto sm:flex-col  md:flex-row lg:flex-col p-4 flex justify-center items-center ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             <div
               className="cosmetics-imageflex justify-items-center p-4 inset-0"

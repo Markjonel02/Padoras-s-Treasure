@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Loaders } from "./components/Loaders";
 import { LoadPageProvider } from "./context/LazyContext";
@@ -37,11 +37,11 @@ const App = () => {
 
   return (
     <>
-      <Suspense fallback={<Loaders />}>
-        <PrimeReactProvider value={{ ripple: true }}>
-          <LoadPageProvider>
+      <PrimeReactProvider value={{ ripple: true }}>
+        <LoadPageProvider>
+          <Suspense fallback={<Loaders />}>
+            {!shouldHideNav && <Navigation />}
             <Maincontainer className={mainContainerClasses}>
-              {!shouldHideNav && <Navigation />}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -55,9 +55,9 @@ const App = () => {
                 className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
               />
             </Maincontainer>
-          </LoadPageProvider>
-        </PrimeReactProvider>
-      </Suspense>
+          </Suspense>
+        </LoadPageProvider>
+      </PrimeReactProvider>
     </>
   );
 };

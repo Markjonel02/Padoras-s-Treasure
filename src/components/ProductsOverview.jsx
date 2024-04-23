@@ -98,7 +98,7 @@ const ProductsOverview = () => {
         className={`relative secondTopProducts  ${
           Isclick
             ? "h-full overflow-visible ease"
-            : "overflow-hidden h-[700px] blur-sm  pointer-events-none"
+            : "overflow-hidden h-[500px] blur-sm  pointer-events-none"
         } `}
       >
         <div

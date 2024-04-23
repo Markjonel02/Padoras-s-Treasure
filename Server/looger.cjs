@@ -1,6 +1,13 @@
+var sample = (a,b)=>{
+return a*b;
+}
 
-const add = (a, b) => {
-    return a + b;
-};
+var sample2 = sample(5,5)
 
-export default add;
+
+console.log(global.sample);
+
+
+
+
+require("http")

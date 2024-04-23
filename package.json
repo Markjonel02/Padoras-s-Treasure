@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "node Server/server.mjs",
+    "start": "nodemon Server/server.mjs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -19,6 +19,7 @@
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.5",
     "formik": "^2.4.5",
+    "http-server": "^14.1.1",
     "particles.js": "^2.0.0",
     "primereact": "^10.6.2",
     "prop-types": "^15.8.1",
@@ -26,6 +27,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "swiper": "^11.0.7",
+    "vite-plugin-require": "^1.1.14",
     "yup": "^1.4.0"
   },
   "devDependencies": {

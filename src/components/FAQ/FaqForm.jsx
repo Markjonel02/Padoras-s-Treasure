@@ -26,11 +26,9 @@ const FaqForm = () => {
                 <dt className="mb-2 text-3xl font-extrabold">100k+</dt>
                 <dd className="text-gray-500 dark:text-gray-400">Orders</dd>
               </div>
-              <div className="flex flex-col items-lastname)) {fy-center">
+              <div className="flex flex-col items-center justify-center">
                 <dt className="mb-2 text-3xl font-extrabold">1000+</dt>
-                <dd className="text-gray-500 dark:text-gray-400">
-                  New Customers
-                </dd>
+                <dd className="text-gray-500 dark:text-gray-400">Orders</dd>
               </div>
               <div className="flex flex-col items-center justify-center">
                 <dt className="mb-2 text-3xl font-extrabold">1M+</dt>

@@ -26,8 +26,9 @@ const HomeSection = () => {
           Easy To Refund
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-          The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.
+          Pandora{"'"}s Treasure is committed to ensuring customer satisfaction.
+          If for any reason you are not completely satisfied with your purchase,
+          you can easily request a refund, no questions asked.
         </p>
       </div>
       <div className="text-quaternary dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
@@ -51,8 +52,9 @@ const HomeSection = () => {
           Quality Products
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-          The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.
+          Pandora{"'"}s Treasure: Where Quality Reigns Supreme. We deliver
+          excellence with every product, setting the standard in the industry
+          for unparalleled craftsmanship and customer satisfaction.
         </p>
       </div>
       <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
@@ -76,8 +78,9 @@ const HomeSection = () => {
           Source Payment
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-          The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.
+          Pandora{"'"}s Treasure Source Payment: The origin of funds for
+          purchases from our store, ensuring secure financial transactions and
+          tracking for customer satisfaction and transparency.
         </p>
       </div>
       <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
@@ -101,8 +104,9 @@ const HomeSection = () => {
           24/7 support
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-          The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.
+          Pandora{"'"}s Treasure offers 24/7 support for all your inquiries and
+          assistance needs. Our dedicated team ensures prompt and reliable
+          assistance anytime, anywhere.
         </p>
       </div>
     </div>

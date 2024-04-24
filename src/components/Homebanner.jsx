@@ -40,10 +40,10 @@ const Homebanner = () => {
                 className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl capitalize 
                font-light mt-5 font-Roboto"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                maiores aut minima illo, unde voluptatem! Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. In maiores aut minima illo,
-                unde voluptatem!
+                Discover the allure of Pandora{"'"}s Treasure! Unveil ancient
+                secrets, unearth hidden wonders, and embark on an adventure like
+                never before. Dive into the depths of mystery and excitement
+                today!
               </p>
             </div>
           </div>

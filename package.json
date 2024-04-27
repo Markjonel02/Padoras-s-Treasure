@@ -20,6 +20,7 @@
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.5",
     "formik": "^2.4.5",
+    "gsap": "^3.12.5",
     "http-server": "^14.1.1",
     "particles.js": "^2.0.0",
     "primereact": "^10.6.2",

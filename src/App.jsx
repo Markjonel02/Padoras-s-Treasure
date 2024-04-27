@@ -12,6 +12,7 @@ const About = lazy(() => import("./routers/About"));
 const Faq = lazy(() => import("./components/FAQ/Faq"));
 const PagenotFound = lazy(() => import("./components/Nopage/PagenotFound"));
 const CreateAccount = lazy(() => import("./components/LoginPage/CreateAcc"));
+const LipSerum = lazy(() => import("./components/Productspage/Lipserum"));
 const App = () => {
   const mainContainerClasses = [
     "main",
@@ -28,7 +29,7 @@ const App = () => {
     "p-ripple",
   ].join("");
 
-  const hiddenRoutes = ["/create-account"];
+  const hiddenRoutes = ["/products/lipserum", "/create-account", "*"];
 
   // Check if the current route is in the hiddenRoutes array
   const shouldHideNav = hiddenRoutes.some((route) =>
@@ -47,7 +48,7 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/create-account" element={<CreateAccount />} />
-                <Route path="/pagenotfound" element={<PagenotFound />} />
+                <Route path="/products/lipserum" element={<LipSerum />}></Route>
                 <Route path="*" element={<PagenotFound />} />
               </Routes>
               <ScrollTop

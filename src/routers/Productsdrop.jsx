@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useScrollContext } from "../context/Context";
 import { Ripple } from "primereact/ripple";
+import { NavLink } from "react-router-dom";
 const Productsdrop = () => {
   const { isScroll } = useScrollContext();
   const [isOpen, setIsOpen] = useState(false);
@@ -58,12 +59,12 @@ const Productsdrop = () => {
             aria-labelledby="dropdownHoverButton"
           >
             <li>
-              <a
-                href="#"
+              <NavLink
+                to="/products/lipserum"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Lip Serum
-              </a>
+                Lip Stick
+              </NavLink>
             </li>
             <li>
               <a

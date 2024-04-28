@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Loaders } from "./components/Loaders";
 import { LoadPageProvider } from "./context/LazyContext";
@@ -32,6 +32,7 @@ const App = () => {
   const hiddenRoutes = ["/products/lipserum", "/create-account", "*"];
 
   // Check if the current route is in the hiddenRoutes array
+  const location = useLocation();
   const shouldHideNav = hiddenRoutes.some((route) =>
     location.pathname.startsWith(route)
   );
@@ -48,13 +49,15 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/create-account" element={<CreateAccount />} />
-                <Route path="/products/lipserum" element={<LipSerum />}></Route>
+                <Route path="/products/lipserum" element={<LipSerum />} />
                 <Route path="*" element={<PagenotFound />} />
               </Routes>
-              <ScrollTop
-                threshold={100}
-                className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
-              />
+              {!shouldHideNav && (
+                <ScrollTop
+                  threshold={100}
+                  className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
+                />
+              )}
             </Maincontainer>
           </Suspense>
         </LoadPageProvider>

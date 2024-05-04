@@ -6,6 +6,7 @@ import des2 from "../../assets/imgs/svgs/des2.svg";
 import CardAnim from "./CardAnim";
 import Footer from "../Footer";
 import { ScrollTop } from "primereact/scrolltop";
+/* import { LipstickData } from "./AvonData"; */
 const Lipserum = () => {
   const { isLoading } = useLazyContext();
   return (
@@ -30,7 +31,7 @@ const Lipserum = () => {
                   data-aos="fade-right"
                   data-aos-duration="1500"
                 >
-                  Pandora's
+                  Pandora{"'"}s
                 </h1>
 
                 <img
@@ -56,7 +57,6 @@ const Lipserum = () => {
               </div>
             </div>
           </div>
-
           <div className="md:flex md:flex-col md:justify-between md:h-full mt-32">
             <h1 className="text-center md:text-lg lg:text-xl xl:text-6xl ">
               Discover the epitome of luxury
@@ -93,7 +93,6 @@ const Lipserum = () => {
               />
             </div>
           </div>
-
           <div className="flex justify-center mb-32">
             <div className="inline-flex flex-wrap rounded-md shadow-sm mt-10">
               <a
@@ -146,7 +145,36 @@ const Lipserum = () => {
             className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
           />
           <CardAnim />
-
+          {/*  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {LipstickData.map((lipstick) => (
+              <div
+                key={lipstick.id}
+                className="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden"
+              >
+                <img
+                  className="w-full"
+                  src={lipstick.src}
+                  alt={`Lipstick ${lipstick.id}`}
+                />
+                <div className="p-4">
+                  <h2 className="text-gray-800 text-xl font-semibold">
+                    Card Title
+                  </h2>
+                  <p className="mt-2 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <div className="mt-4">
+                    <a
+                      href="#"
+                      className="text-indigo-500 hover:text-indigo-600"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div> */}
           <Footer />
         </>
       ) : (

@@ -57,7 +57,7 @@ const Lipserum = () => {
               </div>
             </div>
           </div>
-          <button className="flex rounded-lg border border-primary px-4 p-4 ml-10 hover:bg-primary">
+          <button className="flex rounded-lg border border-primary px-4 p-4 ml-10 hover:bg-primary hover:scale-105">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

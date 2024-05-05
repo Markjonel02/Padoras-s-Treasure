@@ -10,22 +10,7 @@ const Login = () => {
     <>
       <div className="fixed inset-0 z-0 bg-black opacity-50"></div>
       <div className="relative z-10 min-h-full   flex flex-col items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 rounded-lg ">
-        <button className="absolute top-0 right-0 mt-4 mr-4 text-gray-600 hover:text-gray-900">
-          <span className="sr-only">Close</span>
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+       
         <div className="max-w-md w-full space-y-8">
           <div className="flex flex-col items-center">
             <FaCircleUser className="w-20 h-20 text-darks flex justify-center" />

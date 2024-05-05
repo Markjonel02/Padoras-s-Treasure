@@ -76,7 +76,7 @@ const ProductsOverview = () => {
                   <div className="absolute inset-0 bg-primary opacity-20"></div>
                   <div className="absolute inset-0 flex justify-center items-center"></div>
                 </div>
-                <div className="bg-white p-5 dark:bg-darks  ">
+                <div className="bg-white p-5 dark:bg-dark-pink  ">
                   <h5 className="text-red text-xl font-lighter tracking-wide uppercase dark:text-white  mt-2 leading-loose">
                     shea butter
                   </h5>
@@ -135,7 +135,7 @@ const ProductsOverview = () => {
                     <div className="absolute inset-0 bg-primary opacity-20"></div>
                     <div className="absolute inset-0 flex justify-center items-center"></div>
                   </div>
-                  <div className="bg-white p-5 dark:bg-darks  ">
+                  <div className="bg-white p-5 dark:bg-dark-pink  ">
                     <h5 className="text-red text-xl font-lighter tracking-wide uppercase dark:text-white  mt-2 leading-loose">
                       shea butter
                     </h5>

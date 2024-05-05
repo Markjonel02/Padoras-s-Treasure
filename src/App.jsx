@@ -22,7 +22,7 @@ const App = () => {
     "items-center",
     "justify-center",
     "antialiased",
-    "dark:bg-darks",
+
     "scrollbar-thin",
     "scrollbar-thumb-gray-400",
     "scrollbar-track-gray-100",

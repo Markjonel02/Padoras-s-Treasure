@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer
       className={`bg-secondary ${
-        isDark ? "dark:bg-darks" : ""
+        isDark ? "dark:bg-darks border-0" : ""
       } border shadow-2 overflow-x-hidden `}
     >
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 ">

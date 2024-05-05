@@ -59,7 +59,7 @@ const Navigation = () => {
     <nav
       className={`fixed w-full top-0 z-50 transition duration-300 p-3 ${
         isScroll
-          ? " bg-opacity-55 bg-secondary dark:bg-transparent backdrop-blur-3xl backdrop-saturate-50 rounded-lg shadow  "
+          ? " bg-opacity-55 bg-secondary dark:bg-darks backdrop-blur-3xl backdrop-saturate-50 rounded-lg shadow  "
           : "bg-transparent "
       }`}
     >
@@ -176,39 +176,11 @@ const Navigation = () => {
             <div className="relative ml-3">
               <div>
                 <Button
-                  className="px-5 py-2 rounded-3xl font-Roboto-Medium border border-dark-pink hover:scale-105 ease hover:bg-dark-pink ring-slate-700"
+                  className="px-5 py-2 rounded-3xl font-Roboto-Medium border border-dark-pink dark:border-white dark:text-white hover:scale-105 ease hover:bg-dark-pink ring-slate-700"
                   onClick={() => setisShowed(true)}
                 >
                   <a href="/login">Login</a>
                 </Button>
-                {/* 
-                <Button
-                  type="button"
-                  onClick={() => setisShowed(true)}
-                  className={`relative flex rounded-full p-1 text-sm dark:text-white text-gray-800 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 ${
-                    isScroll && "dark:text-white"
-                  }`}
-                  id="user-menu-button"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <span className="absolute -inset-1.5"></span>
-                  <span className="sr-only">Open user menu</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    fill="none"
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                    />
-                  </svg>
-                </Button> */}
               </div>
 
               <Dialog
@@ -218,6 +190,25 @@ const Navigation = () => {
                 className="rounded-lg shadow-lg w-[500px] flex m-5 ease-in-out"
                 content={() => (
                   <>
+                    <button
+                      onClick={() => setisShowed(false)}
+                      className="absolute top-0 right-0 z-30 mt-4 mr-4 text-gray-600 hover:text-gray-900 dark:bg-quinary "
+                    >
+                      <span className="sr-only">Close</span>
+                      <svg
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
                     <Login />
                   </>
                 )}
@@ -248,10 +239,10 @@ const Navigation = () => {
           </a>
 
           <a
-            to="/contact"
+            to="/faq"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Contact
+            Faq
           </a>
         </div>
       </div>

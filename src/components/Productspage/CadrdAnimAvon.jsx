@@ -9,7 +9,7 @@ const CardAnim = () => {
   useEffect(() => {
     // Effect for handling animation and transitions
     const containerWidth = containerRef.current.offsetWidth;
-    const cardWidth = 96; // Width of each card
+    const cardWidth = 72; // Width of each card
 
     const resetAnimation = () => {
       // Hide all cards and start animation from left to right

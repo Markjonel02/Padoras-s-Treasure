@@ -5,7 +5,7 @@ const HomeSection = () => {
       data-aos="fade-left"
       data-aos-duration="900"
     >
-      <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
+      <div className="bg-white dark:bg-secondary rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
         <div className="inline-flex items-center justify-center p-2 bg-primary rounded-md shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ const HomeSection = () => {
             />
           </svg>
         </div>
-        <h3 className="text-quaternary dark:text-white mt-5 text-base font-medium tracking-tight ">
+        <h3 className="text-quaternary dark:text-quaternary mt-5 text-base font-medium tracking-tight ">
           Easy To Refund
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
@@ -31,7 +31,7 @@ const HomeSection = () => {
           you can easily request a refund, no questions asked.
         </p>
       </div>
-      <div className="text-quaternary dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
+      <div className="text-quaternary dark:bg-secondary rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
         <div className="inline-flex items-center justify-center p-2  bg-primary  rounded-md shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const HomeSection = () => {
             />
           </svg>
         </div>
-        <h3 className="text-quaternary dark:text-white mt-5 text-base font-medium tracking-tight">
+        <h3 className="text-quaternary dark:text-quaternary mt-5 text-base font-medium tracking-tight">
           Quality Products
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
@@ -57,7 +57,7 @@ const HomeSection = () => {
           for unparalleled craftsmanship and customer satisfaction.
         </p>
       </div>
-      <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
+      <div className="bg-white dark:bg-secondary rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
         <div className="inline-flex items-center justify-center p-2  bg-primary  rounded-md shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const HomeSection = () => {
             />
           </svg>
         </div>
-        <h3 className="text-quaternary dark:text-white mt-5 text-base font-medium tracking-tight">
+        <h3 className="text-quaternary dark:text-quaternary mt-5 text-base font-medium tracking-tight">
           Source Payment
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
@@ -83,7 +83,7 @@ const HomeSection = () => {
           tracking for customer satisfaction and transparency.
         </p>
       </div>
-      <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
+      <div className="bg-white dark:bg-secondary rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg w-72 hover:scale-105 ease-in">
         <div className="inline-flex items-center justify-center p-2  bg-primary  rounded-md shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ const HomeSection = () => {
             />
           </svg>
         </div>
-        <h3 className="text-quaternary dark:text-white mt-5 text-base font-medium tracking-tight">
+        <h3 className="text-quaternary dark:text-quaternary mt-5 text-base font-medium tracking-tight">
           24/7 support
         </h3>
         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">

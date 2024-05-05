@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import CardAnimAvon from "./CadrdAnimAvon";
 import lipstickData from "./AvonData";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 const CardAnim = () => {
   // State and Ref setup
   const [offset, setOffset] = useState(0);
@@ -10,7 +12,7 @@ const CardAnim = () => {
   useEffect(() => {
     // Effect for handling animation and transitions
     const containerWidth = containerRef.current.offsetWidth;
-    const cardWidth = 96; // Width of each card
+    const cardWidth = 72; // Width of each card
 
     const resetAnimation = () => {
       // Hide all cards and start animation from right to left
@@ -74,7 +76,7 @@ const CardAnim = () => {
                 alt={`lipstick ${data.id + 1}`}
                 className="w-full h-full object-cover rounded-lg"
               />
-              <p className="text-center mb-2">{data.title}</p>
+              <p className="text-center mb-2 ">{data.title}</p>
             </div>
           </>
         ))}

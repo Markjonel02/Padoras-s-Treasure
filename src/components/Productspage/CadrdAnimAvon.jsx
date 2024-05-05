@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
+import lipstickData from "./AvonData";
 const CardAnim = () => {
   // State and Ref setup
   const [offset, setOffset] = useState(0);
@@ -51,10 +51,10 @@ const CardAnim = () => {
   // Rendering cards with sliding animation
   return (
     <div className="flex overflow-hidden p-4" ref={containerRef}>
-      {[...Array(7)].map((_, index) => (
+      {lipstickData.map((data, index) => (
         <div
           key={index}
-          className="w-full sm:w-72 md:w-96 h-48 bg-gray-300 mr-4 rounded-lg"
+          className="w-full sm:w-72 md:w-96 h-48 bg-gray-300 mr-4 rounded-lg cursor-pointer"
           style={{
             transform: `translateX(${offset}px)`, // Translate based on offset
             transition: "transform 2s linear", // Animation duration and easing
@@ -65,7 +65,7 @@ const CardAnim = () => {
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
         >
-          Hello
+          <img src={data.src} alt={data.id + 1} />
         </div>
       ))}
     </div>

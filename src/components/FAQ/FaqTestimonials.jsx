@@ -22,7 +22,7 @@ const FaqTestimonials = () => {
   };
   return (
     <>
-      <h1 className="text-xl  xl:text-5xl md:text-4xl sm:text-3xl  flex justify-center font-Roboto-Black dark:text-quinary text-gray-800">
+      <h1 className="text-xl  xl:text-5xl md:text-4xl sm:text-3xl  flex justify-center font-Roboto-Black dark:text-gray-800 text-gray-800">
         Customer{"'"}s Feedback
       </h1>
       <Swiper
@@ -39,6 +39,7 @@ const FaqTestimonials = () => {
         <div className="testimonials flex justify-center align-middle text-quaternary font-Roboto-LightItalic dark:bg-darks ">
           <SwiperSlide className="flex justify-center p-3">
             <figure className="max-w-screen-md mx-auto  border border-gray-200 p-6 rounded-xl shadow-xl ">
+              {" "}
               <svg
                 className="w-10 h-10 mx-auto mb-3 text-gray-400 font-Roboto-LightItalic dark:text-gray-600"
                 aria-hidden="true"
@@ -47,7 +48,7 @@ const FaqTestimonials = () => {
                 viewBox="0 0 18 14"
               >
                 <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-              </svg>
+              </svg>{" "}
               <blockquote>
                 <p className="text-xl font-Roboto-LightItalic text-quaternary dark:text-white">
                   <span>&quot;</span>Lorem ipsum dolor sit amet consectetur
@@ -58,7 +59,6 @@ const FaqTestimonials = () => {
                   <span>&quot;</span>
                 </p>
               </blockquote>
-              <Ripple />
               <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
                 <img
                   className="w-6 h-6 rounded-full"
@@ -76,6 +76,7 @@ const FaqTestimonials = () => {
               </figcaption>
             </figure>
           </SwiperSlide>
+
           <SwiperSlide className="flex justify-center p-3">
             <figure className="max-w-screen-md mx-auto  border border-gray-200 p-6 rounded-xl shadow-xl ">
               <svg
@@ -115,6 +116,7 @@ const FaqTestimonials = () => {
               </figcaption>
             </figure>
           </SwiperSlide>
+
           <SwiperSlide className="flex justify-center p-3">
             <figure className="max-w-screen-md mx-auto  border border-gray-200 p-6 rounded-xl shadow-xl ">
               <svg
@@ -152,6 +154,7 @@ const FaqTestimonials = () => {
               </figcaption>
             </figure>
           </SwiperSlide>
+
           <SwiperSlide className="cards flex justify-center p-3">
             <figure className="max-w-screen-md mx-auto  border border-gray-200 p-6 rounded-xl shadow-xl p-ripple">
               <svg
@@ -190,6 +193,7 @@ const FaqTestimonials = () => {
               </figcaption>
             </figure>
           </SwiperSlide>
+
           <SwiperSlide className="flex justify-center p-3">
             <figure className="max-w-screen-md mx-auto  border border-gray-200 p-6 rounded-xl shadow-xl ">
               <svg

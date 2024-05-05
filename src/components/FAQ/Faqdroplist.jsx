@@ -67,7 +67,7 @@ const Faqdroplist = () => {
   return (
     <>
       <div className="faq-container mb-32">
-        <h1 className=" px-10 text-quaternary flex justify-start xl:justify-start sm:justify-center mb-5 mt-32  font-Roboto-Black text-3xl xl:text-5xl lg:text-4xl md:3xl sm:text-2xl">
+        <h1 className=" px-10 text-quaternary dark:text-white flex justify-start xl:justify-start sm:justify-center mb-5 mt-32  font-Roboto-Black text-3xl xl:text-5xl lg:text-4xl md:3xl sm:text-2xl">
           Frequently Asked Questions
         </h1>
         {faqitems.map((item, index) => (

@@ -3,7 +3,7 @@ import img from "../assets/imgs/svgs/pic.svg";
 const Homebanner = () => {
   return (
     <>
-      <div className="banner-wrapper relative  flex w-full h-[400px] bg-primary dark:bg-dark-pink">
+      <div className="banner-wrapper relative  flex w-full h-[400px] bg-primary dark:bg-darks">
         <div className="image-container flex justify-end absolute top-0 right-0 bottom-0">
           <img
             src={img}

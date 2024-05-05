@@ -76,7 +76,7 @@ const ProductsOverview = () => {
                   <div className="absolute inset-0 bg-primary opacity-20"></div>
                   <div className="absolute inset-0 flex justify-center items-center"></div>
                 </div>
-                <div className="bg-white p-5 dark:bg-dark-pink  ">
+                <div className="bg-white p-5 dark:bg-darks  ">
                   <h5 className="text-red text-xl font-lighter tracking-wide uppercase dark:text-white  mt-2 leading-loose">
                     shea butter
                   </h5>
@@ -94,6 +94,7 @@ const ProductsOverview = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
       <div
         className={`relative secondTopProducts  ${
           Isclick
@@ -113,7 +114,6 @@ const ProductsOverview = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          {" "}
           {[...Array(10).keys()].map((index) => (
             <SwiperSlide key={index}>
               <div className="p-5">
@@ -135,7 +135,7 @@ const ProductsOverview = () => {
                     <div className="absolute inset-0 bg-primary opacity-20"></div>
                     <div className="absolute inset-0 flex justify-center items-center"></div>
                   </div>
-                  <div className="bg-white p-5 dark:bg-dark-pink  ">
+                  <div className="bg-white p-5 dark:bg-darks  ">
                     <h5 className="text-red text-xl font-lighter tracking-wide uppercase dark:text-white  mt-2 leading-loose">
                       shea butter
                     </h5>
@@ -161,7 +161,6 @@ const ProductsOverview = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          {" "}
           {[...Array(10).keys()].map((index) => (
             <SwiperSlide key={index}>
               <div className="p-5">

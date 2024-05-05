@@ -3,9 +3,10 @@ import { Loaders } from "../Loaders";
 import lipstick from "../../assets/imgs/svgs/Lipstick.svg";
 import des1 from "../../assets/imgs/svgs/des1.svg";
 import des2 from "../../assets/imgs/svgs/des2.svg";
-import CardAnim from "./CardAnim";
+import CardAnim from "./CadrdAnimAvon";
 import Footer from "../Footer";
 import { ScrollTop } from "primereact/scrolltop";
+import Avon from "./Avon";
 
 const Lipserum = () => {
   const { isLoading } = useLazyContext();
@@ -57,7 +58,7 @@ const Lipserum = () => {
               </div>
             </div>
           </div>
-          <button className="flex rounded-lg border border-primary px-4 p-4 ml-10 hover:bg-primary hover:scale-105">
+          <button className="flex rounded-lg border border-primary px-4 p-4 ml-10 hover:bg-primary hover:scale-105 dark:text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -78,13 +79,13 @@ const Lipserum = () => {
             </a>
           </button>
           <div className="md:flex md:flex-col md:justify-between md:h-full mt-32">
-            <h1 className="text-center md:text-lg lg:text-xl xl:text-6xl ">
+            <h1 className="text-center md:text-lg lg:text-xl xl:text-6xl  dark:text-white">
               Discover the epitome of luxury
             </h1>
-            <h3 className="text-center text-sm md:text-base lg:text-lg xl:text-5xl font-Roboto-Light">
+            <h3 className="text-center text-sm md:text-base lg:text-lg xl:text-5xl font-Roboto-Light dark:text-primary">
               and innovation with our Curated
             </h3>
-            <h3 className="text-center text-sm md:text-base lg:text-lg xl:text-5xl font-Roboto-Light">
+            <h3 className="text-center text-sm md:text-base lg:text-lg xl:text-5xl font-Roboto-Light  dark:text-primary">
               selection of top-tier brands
             </h3>
           </div>
@@ -92,18 +93,18 @@ const Lipserum = () => {
             <div className="relative mx-auto max-w-md mt-20 ">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3">
                 <svg
-                  className="w-5 h-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m-1.42-3.546A10 10 0 1118.64 7.36 8 8 0 1021.641 21.361z"
-                  ></path>
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
                 </svg>
               </div>
               <input
@@ -159,19 +160,18 @@ const Lipserum = () => {
                 Narsa
               </a>
             </div>
-          </div>
-          <ScrollTop
-            threshold={100}
-            className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
-          />
-
+          </div>{" "}
+          <Avon />
           <CardAnim />
-
           <Footer />
         </>
       ) : (
         <Loaders />
-      )}
+      )}{" "}
+      <ScrollTop
+        threshold={100}
+        className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
+      />
     </>
   );
 };

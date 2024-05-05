@@ -159,7 +159,7 @@ const Avon = () => {
             data-aos-duration="1000"
           >
             {lipstickData.map((data, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index}> 
                 <div className="p-5">
                   <div className="max-w-sm mx-auto overflow-hidden relative shadow-lg rounded-lg hover:scale-110  ease-in cursor-grab dark:hover:bg-quinary hover:bg-dark-pink mb-10">
                     <img

@@ -4,6 +4,7 @@ import "swiper/css";
 import Avons from "../../assets/imgs/svgs/Lipstickimgdata/Avons.svg";
 import { useState } from "react";
 import AvonLipstick from "./AvonJson";
+import { Navigation, Pagination } from "swiper/modules";
 const Avon = () => {
   const [Isclick, setIsclick] = useState(false);
 
@@ -49,6 +50,7 @@ const Avon = () => {
           className={`container mx-auto antialiased `}
           spaceBetween={10}
           breakpoints={breakpoints}
+          modules={[Navigation, Pagination]}
           data-aos="fade-right"
           data-aos-duration="1000"
         >
@@ -74,7 +76,7 @@ const Avon = () => {
                   </div>
                   <div className="bg-white p-5 dark:bg-darks  ">
                     <h5 className="text-red text-xl font-lighter tracking-wide uppercase dark:text-white  mt-2 leading-loose">
-                      shea butter
+                      {data.title}
                     </h5>
                     <p className="text-gray-700 text-base dark:text-gray-300 0000 mb-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -82,7 +84,7 @@ const Avon = () => {
                     </p>
 
                     <p className="price text-quaternary font-bold dark:text-white text-xl">
-                      Php 200.00
+                      {`Php ${data.price}`}
                     </p>
                   </div>
                 </div>

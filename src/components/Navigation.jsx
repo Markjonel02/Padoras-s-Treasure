@@ -1,18 +1,29 @@
 import { useState, useEffect } from "react";
 import Layout from "./Layout";
-
 import Aos from "aos";
 import { useScrollContext } from "../context/Context";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 import Login from "./LoginPage/Login.";
-import CreateAcc from "./LoginPage/CreateAcc";
 
 const Navigation = () => {
   const { isScroll } = useScrollContext();
   const [isVisible, setIsVisible] = useState(true);
   const [NavisOpen, setNavisOpen] = useState(false);
   const [isShowed, setisShowed] = useState(false);
+  const [activeLink, setActiveLink] = useState(() => {
+    // Retrieve active link from localStorage on initial render
+    return localStorage.getItem("activeLink") || "/";
+  });
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
+  // Update localStorage whenever activeLink changes
+  useEffect(() => {
+    localStorage.setItem("activeLink", activeLink);
+  }, [activeLink]);
   useEffect(() => {
     Aos.init();
 
@@ -225,22 +236,33 @@ const Navigation = () => {
       >
         <div className="space-y-1 px-2 pb-3 pt-2">
           <a
-            to="/"
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page"
+            href="/"
+            className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white cursor-pointer ${
+              activeLink === "/" ? "text-red-500 bg-gray-700" : "text-gray-300"
+            }`}
+            onClick={() => handleLinkClick("/")}
           >
             Home
           </a>
           <a
-            to="/about"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            href="/about"
+            className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white cursor-pointer ${
+              activeLink === "/about"
+                ? "text-red-500 bg-gray-700"
+                : "text-gray-300"
+            }`}
+            onClick={() => handleLinkClick("/about")}
           >
             About
           </a>
-
           <a
-            to="/faq"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            href="/faq"
+            className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white cursor-pointer ${
+              activeLink === "/faq"
+                ? "text-red-500 bg-gray-700"
+                : "text-gray-300"
+            }`}
+            onClick={() => handleLinkClick("/faq")}
           >
             Faq
           </a>

@@ -6,7 +6,7 @@ import des2 from "../../assets/imgs/svgs/des2.svg";
 import CardAnim from "./CardAnim";
 import Footer from "../Footer";
 import { ScrollTop } from "primereact/scrolltop";
-import Avon from "./Avon";
+
 const Lipserum = () => {
   const { isLoading } = useLazyContext();
   return (
@@ -57,6 +57,26 @@ const Lipserum = () => {
               </div>
             </div>
           </div>
+          <button className="flex rounded-lg border border-primary px-4 p-4 ml-10 hover:bg-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
+            </svg>
+
+            <a href="/" className="font-Roboto-Medium mx-1 ">
+              Back
+            </a>
+          </button>
           <div className="md:flex md:flex-col md:justify-between md:h-full mt-32">
             <h1 className="text-center md:text-lg lg:text-xl xl:text-6xl ">
               Discover the epitome of luxury
@@ -145,7 +165,6 @@ const Lipserum = () => {
             className="w-5rem h-5rem border-round-md bg-dark-pink text-white rounded-full p-4"
           />
 
-          <Avon />
           <CardAnim />
 
           <Footer />

@@ -53,23 +53,30 @@ const CardAnim = () => {
   return (
     <>
       <div className="flex overflow-hidden p-4 " ref={containerRef}>
-        {[...Array(7)].map((_, index) => (
-          <div
-            key={index}
-            className="w-full sm:w-1/1 md:w-1/2 lg:w-2/5 xl:w-1/3 h-48 bg-gray-300 mr-4 rounded-lg "
-            style={{
-              transform: `translateX(${offset}px)`, // Translate based on offset
-              transition: "transform 2s linear", // Animation duration and easing
-              boxShadow:
-                activeCard === index ? "0 0 3px rgba(0, 0, 0, 0.5)" : "none", // Add shadow when active
-              filter:
-                activeCard === index ? "brightness(0.9)" : "brightness(1)",
-            }}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            Hello
-          </div>
+        {lipstickData.map((data, index) => (
+          <>
+            <div
+              key={data.id}
+              className="w-full sm:w-1/1 md:w-1/2 lg:w-2/5 xl:w-1/3 h-48 bg-gray-300 mr-4 rounded-lg "
+              style={{
+                transform: `translateX(${offset}px)`, // Translate based on offset
+                transition: "transform 2s linear", // Animation duration and easing
+                boxShadow:
+                  activeCard === index ? "0 0 3px rgba(0, 0, 0, 0.5)" : "none", // Add shadow when active
+                filter:
+                  activeCard === index ? "brightness(0.9)" : "brightness(1)",
+              }}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                src={data.src}
+                alt={`lipstick ${data.id + 1}`}
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <p className="text-center mb-2">{data.title}</p>
+            </div>
+          </>
         ))}
       </div>
       <CardAnimAvon />

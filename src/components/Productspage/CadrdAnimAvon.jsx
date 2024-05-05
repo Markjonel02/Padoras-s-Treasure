@@ -54,7 +54,7 @@ const CardAnim = () => {
       {[...Array(7)].map((_, index) => (
         <div
           key={index}
-          className="w-full sm:w-72 md:w-96 h-48 bg-gray-300 mr-4 rounded-sm"
+          className="w-full sm:w-72 md:w-96 h-48 bg-gray-300 mr-4 rounded-lg"
           style={{
             transform: `translateX(${offset}px)`, // Translate based on offset
             transition: "transform 2s linear", // Animation duration and easing

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import CardAnimAvon from "./CadrdAnimAvon";
-
+import lipstickData from "./AvonData";
 const CardAnim = () => {
   // State and Ref setup
   const [offset, setOffset] = useState(0);
@@ -52,12 +52,11 @@ const CardAnim = () => {
   // Rendering cards with sliding animation
   return (
     <>
-      {" "}
-      <div className="flex overflow-hidden p-4" ref={containerRef}>
+      <div className="flex overflow-hidden p-4 " ref={containerRef}>
         {[...Array(7)].map((_, index) => (
           <div
             key={index}
-            className="w-full sm:w-1/1 md:w-1/2 lg:w-2/5 xl:w-1/3 h-48 bg-gray-300 mr-4 rounded-sm"
+            className="w-full sm:w-1/1 md:w-1/2 lg:w-2/5 xl:w-1/3 h-48 bg-gray-300 mr-4 rounded-lg "
             style={{
               transform: `translateX(${offset}px)`, // Translate based on offset
               transition: "transform 2s linear", // Animation duration and easing
